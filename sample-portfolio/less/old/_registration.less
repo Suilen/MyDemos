@@ -1,0 +1,160 @@
+@import "_panasonic-variables.less";
+@import "_panasonic-mixins.less";
+@import "mixins.less";
+@import "variables.less";
+
+.p-banner {
+    background-image: url('../images/banner-registration.jpg') 
+    }
+
+.p-instruction {
+    background: #f6f6f6;
+    .row {
+        padding: 29px 0;
+        span{
+            p {font-weight: bold;font-size: 16px; line-height: auto;}
+            border-right: 2px solid #fff;
+            padding: 0 30px;
+            height: 103px;
+            }
+        span.reg-span-4{border-right: 0;}
+        }
+    }
+
+
+.inner-content {
+    p {color: @pDarkGrey;}
+    a {color: @pDarkGrey;}
+     form {
+         label {color: @pBlue; font-size: 15px; line-height: auto; font-family: Arial; font-weight: normal;}
+        .form-group{
+            input, select {height: 39px;}
+            input#date-of-birth {text-transform: uppercase;}
+            .select-wrp{
+                position: relative;
+                width: 100%; overflow: hidden;
+                border: 1px solid rgb(86, 86, 86);
+                background: #f6f6f6;
+                #p-dropdown-field {}
+                #p-dropdown-i {
+                display: block; 
+                position: absolute;
+                right: 0px;
+                top: 2px;
+                width: 24px;
+                text-align: center;
+                line-height: 37px;
+                z-index: 20;
+                background: #f6f6f6;
+                pointer-events: none;
+                }
+               
+               select#headphone-mode {
+                border: 0;
+                width: 110%;
+                left: -5px;
+                background: transparent !important;
+                position: relative;}
+                
+                }
+                 
+            }
+        
+        }
+}
+ .modal-box{
+        position: relative;
+		margin: 15% auto;
+		padding: 0;
+		z-index: 200;
+		height: 278px;
+			width: 523px;
+			background: #fff;
+        }
+
+.inner_modal_box{
+            background-color: #fff;
+			height: 100%;
+			width: 100%;
+			overflow : hidden;
+			text-overflow: ellipsis;
+			padding: 40px 80px;
+			-moz-border-radius: 0;    
+			-webkit-border-radius: 0;
+			border-radius: 0;
+    text-align: center;
+    border: 1px solid rgb(86, 86, 86);
+    h3 {margin-bottom: 25px;}
+    p.sub {font-size: 20px; line-height: auto; font-family: 'DINOT_CondBold','Open Sans Condensed', sans-serif; color: #2fa4ce;}
+    p {margin: 20px 0 25px 0;}
+    p.small, a{font-size: 12px; line-height: auto; color: #acacac;}
+   
+    .modal-close-btn{background-size: 27px 27px;background: @pBlue; }
+    }
+    
+    
+    
+    
+// ==================================================================== responsive
+
+@media (max-width: 991px ){
+    .p-instruction {
+      .row {
+        padding: 15px 0;
+        span{        
+            border-bottom: 0;
+            padding: 8px 30px;
+            height: auto;
+            }
+        span.reg-span-2,
+        span.reg-span-4{border-right: 0;}
+        }
+    }
+  }
+
+
+@media (max-width: 768px){
+  .p-instruction {
+      .row {
+        padding: 15px 0;
+        span{            
+            p {font-weight: bold;font-size: 14px; line-height: auto;}
+            border-bottom: 2px solid #fff;
+            border-right: 0;
+            padding: 8px 30px;
+            height: auto;
+            }
+        span.reg-span-4{border-bottom: 0;}
+        }
+    }
+  }
+  
+ @media (max-width: 768px) {
+      #date-of-birth{ width: 100% !important;} 
+     }
+
+@media (max-width: 580px){
+  .p-instruction {
+      .row {
+        padding: 10px 0;
+        span{            
+            p {font-weight: bold;font-size: 13px; line-height: auto;}            
+            border-bottom: 1px solid #fff;
+            border-right: 0;
+            padding: 5px 20px;
+            height: auto;
+            }
+        span.reg-span-4{border-bottom: 0;}
+        }
+    }
+    
+    .modal-box {
+        width: 300px;
+        height: 310px;
+        .inner_modal_box {
+            padding: 25px 20px;
+            p.sub {font-size: 14px;}
+            }
+        }
+  }
+  

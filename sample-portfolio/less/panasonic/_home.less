@@ -1,0 +1,137 @@
+@import "_panasonic-variables.less";
+@import "_panasonic-mixins.less";
+@import "mixins.less";
+@import "variables.less";
+
+.inner-content {
+    padding: 80px 0;
+    p,a  {color: @pDarkGrey;} 
+    a#yellow-link {color: #ffbb00;}
+    h4 {font-weight: normal; }
+    a {text-decoration: underline;}
+    .p-phone-l3,
+    .p-phone-l4 {
+         font-family:'DINOT_CondBold','Open Sans Condensed', sans-serif;
+        }
+    .p-phone-l1{font-family: 'DINOT_Bold', 'Open Sans Condensed',sans-serif; font-size: 21px ; line-height: 23px; color: #727272; text-transform: none;}
+    .p-phone-l2{margin: 0 0 20px 0;font-family: 'DINOT_Bold','Open Sans Condensed',sans-serif; font-size: 21px; line-height: 23px; color: #2fa4ce; text-transform: uppercase ;}
+    .p-phone-l3{ font-size: 21px; line-height: 23px; color: #acacac; text-transform: none;}
+    .p-phone-l4{margin: 0 0 10px 0; font-size: 30px; line-height: 33px; color: #2fa4ce; text-transform: uppercase;}
+    .p-phone-l5{margin: 0 0 30px 0; color: #acacac; text-transform: uppercase;}
+    
+    h2.home-h-main {margin-top: 0;} 
+    p.home-h-sub{font-size: 16px; line-height: 23px; color: black;}
+    .row{margin-bottom: 55px;
+        span.p-instr-right {left: -25px;
+        div {
+            padding-left: 20px;
+            p {position: relative;
+            span{
+                display: block;
+                width: 25px;
+                text-align: right;
+                position: absolute;
+                left: -30px;}
+            }
+            
+            }
+        }
+        
+    }
+    .row.p-instr-last{margin-bottom: 0;}
+
+    img {
+        margin: 0 auto;
+        display: block;
+        }
+    img#headphone-img-1 {width: 136px; height: 184px;}
+    img#headphone-img-2 {width: 215px; height: 120px; margin-top: 62px; }
+    img#headphone-img-3 {width: 134px; height: 183px;margin-top: 30px; }
+    
+    #rhapsody-i {background: url('../images/logo-rhapsody.png') no-repeat;
+            background-size: 173px 34px;
+            display: inline-block;
+            width: 173px; height: 34px;    
+            margin-right: 30px;
+            }
+    #audiobooks-i {background: url('../images/logo-audiobooks.png') no-repeat;
+            background-size: 194px 30px;
+            display: inline-block;
+            width: 194px; height: 30px;  
+            top: -4px;
+            position: relative;
+    }
+    p#p-home-notice {
+    font-size: 12px !important;
+    color: rgb(86, 86, 86);
+    margin: 60px 60px 0px 50px !important;
+    line-height: auto !important;
+    }
+}
+
+
+
+// ==================================================================== responsive
+@media (max-width: 990px){
+    .inner-content  {
+        padding: 80px 195px;
+    .row{margin-bottom: 35px;
+        span.p-instr-right {left: 0;}
+        }
+    img#headphone-img-1,
+    img#headphone-img-2,
+    img#headphone-img-3 {margin-top: 20px; margin-bottom: 10px; }
+    }
+    .row.p-instr-last {margin-bottom: 0;}
+}
+
+@media (max-width: 971px){
+     .inner-content  {
+    padding: 80px 95px;
+    
+        p#p-home-notice {
+        font-size: 12px !important;
+        margin: 60px 0 0px 0 !important;
+        }
+    }  
+     
+}
+
+@media (max-width: 768px){
+  .inner-content {
+     #rhapsody-i {
+            background-size: 97px 19px;
+            width: 97px; height: 19px;    
+            margin-right: 20px;
+            }
+    #audiobooks-i {
+            background-size: 109px 17px;
+            width: 109px; height: 17px;  
+            top: -3px;
+    }
+    
+}
+}
+
+@media (max-width:@screen-xs-min){
+.inner-content {padding: 25px 5px 15px 5px;
+.row {margin-bottom: 35px;
+    span.p-instr-right{
+       div { padding-left: 15px;}
+        }
+    
+}
+    .p-phone-l1{margin-top: 23px; font-size: 13px ; line-height: 14px; }
+    .p-phone-l2{font-size: 13px ; line-height: 14px;}
+    .p-phone-l3{font-size: 13px; line-height: 18px; }
+    .p-phone-l4{ margin: 0 0 10px 0; font-size: 18px ; line-height: 23px;}
+    .p-phone-l5{margin: 0 0 10px 0;}
+    p,.p-phone-l5 {font-size: 10px; line-height: 12px;}
+     p#p-home-notice {
+    font-size: 12px !important;
+    line-height: 15px !important;
+    }
+}
+    #only-mobile {display: block;}
+  .carousel-nested{display: none;} 
+}

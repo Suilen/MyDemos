@@ -1,0 +1,93 @@
+.ir {
+    text-indent:100%;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.text-shadow(@h:1px, @v:1px, @b:1px, @txtshadowcolor:@black){
+    text-shadow:@h @v @b @txtshadowcolor;
+    }
+
+.box-shadow(@boxshadow) {
+	-webkit-box-shadow:  @boxshadow ;
+	-moz-box-shadow:    @boxshadow ;
+	-ms-box-shadow:     @boxshadow ;
+	-o-box-shadow:     @boxshadow ;
+	box-shadow:     @boxshadow ;
+
+}
+
+.box-sizing(@bm){
+    -webkit-box-sizing: @bm;
+    -moz-box-sizing: @bm;
+    -ms-box-sizing: @bm;
+    -o-box-sizing: @bm;
+    box-sizing: @bm;
+}
+
+.placeholder(@color) {
+    ::-webkit-input-placeholder {
+        color: @color;
+    }
+    :-moz-placeholder {
+        color: @color;
+    }
+    ::-moz-placeholder {
+      color: @color;
+    }
+}
+
+.border-radius(@radius){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+    }
+.button-variant(@background; @border; @color; @shadow) {
+  color: @color;
+  background-color: @background;
+  border: 1px solid @border;
+  .box-shadow(@shadow);
+background-image: -moz-linear-gradient(top, @background, @border);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@background), to( @border));
+background-image: -webkit-linear-gradient(top, @background,  @border);
+background-image: -o-linear-gradient(top, @background,  @border);
+background-image: linear-gradient(to bottom, @background,  @border);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@background, endColorstr=@border,GradientType=0 ); /* IE6-8 */
+background-repeat: repeat-x;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}

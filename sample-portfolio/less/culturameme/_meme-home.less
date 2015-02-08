@@ -1,0 +1,28 @@
+@import "_meme-variables.less";
+@import "_meme-mixins.less";
+@import "mixins.less";
+
+.inner-banner,
+#banner-wrp {
+	width: 100%;
+	height: 450px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+    background-size: cover;
+    .transition(all 1s);
+    margin-top: 65px;
+}
+
+
+
+// ========================================================================= responsive 
+@media (max-width: 1199px ){
+    #banner-wrp {height: 400px;}
+    }
+@media (max-width: 992px){
+    #banner-wrp {height: 340px;}
+}
+
+@media (max-width: 767px){
+    #banner-wrp {height: 270px;}
+}

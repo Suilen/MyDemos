@@ -1,0 +1,39 @@
+@import "_panasonic-variables.less";
+@import "_panasonic-mixins.less";
+@import "mixins.less";
+@import "variables.less";
+
+.p-banner {
+  background-image: url('../images/banner-privacy.jpg');
+}
+
+.inner-content {
+    p {color: @privacyTextColor;}
+    a {color: @privacyTextColor;}
+    h4,h5 {
+        span.p-n {position: absolute;left: 0px;}
+        span.p-h {position: relative; left: 32px; display: inline-block;}
+         }
+    h4 {margin: 27px 0 5px 0;}
+    p.fp, p.fh {margin-top: 13px;}
+    p.last-p {margin-top: 35px;}
+    h5 {color: @pBlue; margin: 15px 0;}
+    ul{ list-style: initial;
+        padding-left: 23px;
+        li {list-style: initial;
+            color: @privacyTextColor;
+            font-family: Arial; font-size: 15px;line-height: 20px;
+            margin: 0;
+            }
+        }
+    p {margin-bottom: 5px;}
+    }
+// ==================================================================== responsive
+@media (max-width:@screen-xs-min){
+.inner-content {
+    p, ul li{font-size: 13px; line-height: auto;}
+    h4,h5 {
+        span.p-h {position: relative; left: 30px; display: inline-block;width: 258px;}
+        }
+    }
+}

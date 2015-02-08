@@ -1,0 +1,312 @@
+@import "_juilliard_vars.less";
+@import "_juilliard_mixins.less";
+@import "mixins.less";
+
+.j-page-wrp {
+    a { .transition(all, .4s); text-decoration: none !important;}
+       
+    }
+
+h1#j-home-welcome {font-size: 18px;}
+
+// ===========================================================================  header
+header {
+    
+    height: 54px;
+    background-color:@jBlue1;
+    border-top: 4px solid @jBlue2;
+    .j-logo{ 
+        background: rgb(162, 211, 232);
+        background: rgba(255, 255, 255, 0.4);
+        height: 50px; width: 45px;
+        position: absolute;
+    	left: 0;
+    	top: 0;
+    img {
+        width: auto;
+        height: 45px;
+        padding: 0;
+        }
+    }
+    ul.menu {           
+                
+            list-style: none !important;
+            li {list-style: none !important;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            a,  a:visited,a:active
+             {
+             	padding: 0 20px;
+                display: block;
+                font-family: Helvetica;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: .1em;
+                line-height: 50px;
+                font-size: 14px;
+                white-space: nowrap;
+                color: #fff;        	    
+            }  
+            a:hover {
+            background: @jBlue2;
+            }    
+                
+        }
+    
+    }
+    
+    h2 {display: none;}
+    
+    a.toNav {
+    float: right;
+    margin-right: 5px;
+    line-height: 50px;
+    
+    right: 0;
+    position: absolute;
+    
+    color: #fff;
+    font-weight: 300;
+    padding: 0px 10px;
+    display: inline-block;
+    margin-top: 0;
+    border: 1px solid #fff;
+    .border-radius(20px 20px 0 0 ); 
+    
+    &:hover, &:focus {
+        color: #000;
+        text-shadow: 1px 1px 1px #eee ;
+        background: #fff;
+        }
+    }
+    
+    .j-main-menu {
+        display: none;
+        position: absolute;
+        margin-top: -100px;
+        opacity: 0;
+        left: 0;
+        visibility: hidden;
+        width: 100%; 
+        z-index: 10;      
+       }
+       
+      .target {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            margin-top: 51px;
+            
+            
+            .menu li {
+            display: block;
+            background: @jBlue1;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            width: 100%;
+            
+            a:hover {background: @jBlue2;} 
+            }
+        }  
+        
+        
+    .j-user-menu {
+    position: absolute;
+    left: 50px;
+    width: 200px;
+    z-index: 5;
+    
+    .menu {
+        
+        a,  a:visited,a:active
+             {
+             	color: #fff;
+            	font-weight: 300;
+            	padding: 0px 10px;
+            	display: inline-block;
+            	margin-top: 0;
+            	border: 1px solid #fff;
+            	.border-radius(20px 20px 0 0 );       
+            }  
+            a:hover {
+            color: #000;
+            text-shadow: 1px 1px 1px #eee ;
+            background: #fff;
+            }  
+        
+        }
+    }
+
+}
+
+
+
+.j-body {
+    
+    .node {
+        .field-name-field-featured-image {
+            img {margin-bottom: 30px;
+            .box-shadow(0 0 20px #000);
+            }            
+            }
+        .field-name-field-body {
+            div div {line-height: 30px;}
+            }   
+        }
+        
+// the course node
+.node-course {
+    margin: 0 0 20px 0;
+    .field-name-field-course-name{font-size: 24px; margin: 20px 5px;}
+    .field-name-field-course-credits {margin: 20px 5px;}
+    
+    .node-readmore,
+    .field-name-field-course-tags{
+        color: @jBlue1;margin: 20px 5px;
+        &:hover{ color: @jBlue2;}
+    }
+}   
+        
+// the course slide show 
+    #block-views-drama-division-courses-block,
+    #block-views-music-division-courses-block,
+    #block-views-dance-division-courses-block{
+        width: 300px;
+        position: relative;
+        h2 {
+            position: absolute;
+            top: 250px;
+            right: 0;
+            }
+        }
+
+    .view-drama-division-courses,
+    .view-music-division-courses,
+    .view-dance-division-courses{
+        margin-top: 20px;
+        .views-field-title{
+            position: absolute;
+            right: 0;
+            bottom: 60px;
+            background: rgb(246, 246, 246);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 15px;
+            font-size: 14px;
+            }
+        
+        .views-slideshow-controls-top {
+            position: absolute;
+            top: 255px;
+            left: 0;
+            width: 300px;
+            
+            }
+        .views-content-counter {
+            float: left;
+            margin: 3px;
+            text-indent: 100%;
+            width: 10px;
+            height: 10px;
+            overflow: hidden;
+            background: #eee;
+            .border-radius(5px);
+            .box-shadow(inset 0 0 1px #B2B2B2);
+            
+            &:hover {
+                background: #fff;
+                }
+            }
+        .active .views-content-counter {background: #fff;}
+        }
+}
+
+// ========================================================================= responsive 
+
+
+    
+
+@media (min-width: 320px) {
+    
+
+}
+
+@media (min-width: 480px) {
+       
+    header {
+    .j-logo {width: auto;
+        img {padding: 0 20px;}
+    }
+    
+     .j-user-menu {
+        position: absolute;
+        right: initial;
+        left: 140px;        
+        }  
+    
+    a.toNav {
+     right: initial;
+    position: initial;
+    }
+    }
+
+}
+@media (min-width: 550px) {
+ h1#j-home-welcome {font-size: 30px;}
+}
+
+@media (min-width: 768px){
+
+    header {
+       
+        .j-logo{ 
+            width: initial;
+        }
+        
+        a.toNav {
+        display: none;
+        }
+        
+        .j-main-menu {
+            display: block;
+            margin-top: 0;
+            visibility: visible;
+            opacity: 1;
+            margin-left: 137px;
+            float: left;
+            max-width: 400px;
+            }
+       .target {
+            display: inline-block;
+            visibility: visible;
+            opacity: 1;
+            margin-top: 0;            
+            
+            .menu li {
+            display: inline-block;
+            background: @jBlue1;
+            border-bottom: 0px solid transparent;
+            text-align: initial;
+            width: initial;
+            
+            a:hover {background: @jBlue2;} 
+            }
+        }   
+        .j-user-menu {
+        right: 5px;
+        left: auto;
+        .menu {text-align: right;}
+        }              
+    
+    }
+    
+}
+
+@media (min-width: 992px){
+
+}
+
+
+@media (min-width: 1200px ){
+
+}

@@ -1,0 +1,372 @@
+@import "_vars.less";
+@import "_mixins.less";
+@import "_fonts.less";
+@import "mixins.less";
+@import "variables.less";
+*{
+ .box-sizing(border-box);   
+}
+
+body {
+    font-family: @bodyFont, @primaryFont,@backupFonts;
+    font-size: @baseFontSize;
+    line-height:@lineHeight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @secondaryColor;
+    font-family:@secondaryFont;
+}
+
+h3 {margin: 1.2em 0;}
+p, h4 {
+    margin: 1.5em 0 1em;
+    }
+
+img {width:100%;height:auto;}
+
+hr {
+    border:0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left,
+    fade(@black, 0%), fade(@black, 15%), fade(@black,0%));
+    background-image: -moz-linear-gradient(left,
+    fade(@black, 0%), fade(@black, 15%), fade(@black,0%));
+    background-image: -ms-linear-gradient(left,
+    fade(@black, 0%), fade(@black, 15%), fade(@black,0%));
+    background-image: -o-linear-gradient(left,
+    fade(@black, 0%), fade(@black, 15%), fade(@black,0%));
+    background-image: linear-gradient(left,
+    fade(@black, 0%), fade(@black, 15%), fade(@black,0%));
+    margin: (@baseLength *4) 0;
+}
+
+
+input, textarea{
+            
+            @borderColor: darken(@secondaryColor, 10%);
+            @inputShadow: inset 0px 1px 1px 0px fade(@black,7% ),
+            0 0 8px 0 fade(@borderColor, 50%);
+            background-color: #fff;
+            border: 1px solid rgba(195, 200, 204, 0.8);
+            .border-radius(2px);
+            padding-left: .5em;
+            font-size:.8em;
+            outline:0;
+            outline:thin dotted \9;
+            .box-shadow(inset 0px 1px 1px 0px fade(@black,7% ));
+            transition: border linear .2s, box-shadow linear .2s;
+        &:focus {
+            border: 1px solid @borderColor;
+            .box-shadow(@inputShadow);
+            
+            }        
+} 
+input {
+    .placeholder(darken(@white, 10%));
+    }
+
+.btn{
+    .button-variant(@secondaryColor, 
+    darken(@secondaryColor, 10%), @white,
+    inset 0 1px 1px -1px fade(@white, 75%));
+    font-size: 1.2em;
+    .border-radius(3px);
+    .text-shadow(1px, 1px, 0, fade(@black, 30%));
+    }
+.btn-primary{
+     .button-variant(@primaryColor, 
+    darken(@primaryColor, 10%), @white,
+   inset 0 1px 1px -1px rgba(255, 255, 255, .75));
+    padding: (@baseLength * 2) (@baseLength * 4);
+    text-transform:uppercase;
+    }
+
+.header {
+    background-color: darken(@white, 2%);
+    padding: (@baseLength * 2) 0;
+    .navbar-brand {
+        .ir;
+        width:188px;
+        height: 100px;
+        padding: 0;
+        background: url('../img/plush-logo.png') no-repeat;
+        }
+        
+
+    .navbar {
+            .box-shadow(none);
+            border: 0;
+            background: none;
+            ul{
+                margin-top: @baseLength * 3;
+                }
+            li {
+                margin-left: @baseLength;
+                 a {
+                .text-shadow(0,0,0,@white);
+                text-transform: uppercase;
+                font-family: @secondaryFont;
+                letter-spacing: .1em;
+                color: @primaryColor;
+                padding: 0 (@baseLength * 1.5);
+                height: @baseLength *4;
+                line-height: @baseLength * 4.3;
+                &:hover {
+                    .box-shadow(inset 0 0 0 0 fade(@black, 0%));
+                    .border-radius(3px);
+                    background-color: @primaryColor;
+                    color: @tertiaryColor;
+                    }
+                }
+                }
+           
+                .active {
+                    >a {
+                        .box-shadow(inset 0 0 0 0 fade(@black, 0%));
+                        .border-radius(3px);
+                        .text-shadow(0,0,0,fade(@white, 0%));
+                         background: @primaryColor;
+                         color: @tertiaryColor;
+                         &:hover {
+                             background: @primaryColor;
+                             color: @tertiaryColor;
+                             cursor: default;
+                             }
+                        }
+                        
+                    }
+    }
+}
+
+.container{
+    > h1 {
+        margin: (@baseLength * 2) 0 (@baseLength * 3.5);
+        }
+    }
+
+.footer {
+    color: lighten(@black, 70%);
+    background-color: darken(@white, 2%);
+    padding: (@baseLength * 5) 0;
+    margin-top: @baseLength *3;
+    
+    ul{
+        margin: 0;
+        }
+    li{
+        display: inline;
+        margin-right: @baseLength;
+        }
+    a {
+        color: lighten(@black , 70%);
+            &:hover {
+            color: lighten(@black, 30%);
+            text-decoration:none;
+            }
+        }
+    .social-links{
+        text-align: right;
+        li{margin-right: 0; }
+        a{
+            display:inline-block;
+            width: 36px;
+            height: 42px;
+            .ir;
+            }
+        .dribbble a, .facebook a, .twitter a{
+            background: url('../img/social.png') no-repeat;
+            }        
+         .dribbble a {background-position: -7px -58px;
+            &:hover {background-position: -7px 0;}
+         }
+         .facebook a {background-position: -7px -174px;
+            &:hover {background-position: -7px -116px;}}
+            
+         .twitter a {background-position: -7px -290px;
+            &:hover {background-position: -7px -232px;}}
+        }
+        
+        .copyright {
+            text-align: right;
+            display: block;
+            }
+    }
+
+body.gallery .row figure img, body.home .row figure img {
+    border: 1px solid lighten(@black, 90%);
+    .box-shadow(inset 0 0 6px 0 fade(@black, 30%));
+    }
+figure {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	img{
+	    padding: @baseLength;  
+	    }
+}
+.founder {margin-top: 1em !important;
+    	padding: 10px;
+}
+
+body.contact .row.map, 
+body.about .row .img-story img, 
+body.about .row.profile .col-md-4{
+	margin: 0 auto;
+	.border-radius(5px);
+	.box-shadow(0 0 10px 0 lighten(@black, 25%));
+	overflow: hidden;
+}
+body.contact form .row {
+	margin: 0 0 0 -15px;
+}
+
+body.home 
+{
+    .hero-unit {
+        background-color: inherit;
+        padding: (@baseLength *3) 0;
+        color: @primaryColor;
+        margin-bottom: 0;
+        p {
+            font-size: @baseFontSize * 2.8;
+            line-height: @lineHeight * 1.8;
+            }
+        .price {
+            font-weight:bold;
+            color: @secondaryColor;
+            }
+    }
+    
+    .content {
+        .cta{
+            margin-top: @baseLength *4;
+            p{
+                color: @secondaryColor;
+                font-size: @baseFontSize * 1.5;
+                }
+            }
+            .button {padding-top: 2em;}
+        }
+    .testimonial {
+        font-size: @baseLength * 3;
+        padding-bottom: @baseLength *2;
+        color: lighten(@black, 50%);
+        text-align: center;
+        }
+    
+    .subscribe-form {
+        margin-bottom: @baseLength *2;
+        text-align: center;
+        input {width: @baseLength * 28;}
+        input, button {
+            height: @baseLength * 5;
+            padding: @baseLength (@baseLength * 2);
+            margin-bottom: 0;
+            }
+        }
+}
+
+body.contact {
+    .contact-form{
+        input {
+            height: (@baseLength *4);
+            }
+        textarea{
+            min-height: (@baseLength * 8);
+            }
+        }
+        .contact-form, .address {
+            padding: (@baseLength *2) (@baseLength * 1.5);
+            margin-bottom: @baseLength *2;
+            }
+        .address {
+            border-right: 1px solid darken(@white, 5%);
+            }
+    }
+    
+@media (max-width: @screen-md-min) {
+    body{font-size: @baseFontSize * .9;
+    line-height:@lineHeight * .9;}
+    h3{font-size: 1.4em;}
+    .container>h1 {
+    margin: 1em 0 1.5em;
+    }
+    h3 {margin: 1em 0;}
+    p, h4 {margin: 1.2em 0 .8em;}
+    
+    .jumbotron h1 {font-size: 3em;}
+    body.home  .hero-unit p, p.price { 
+        font-size: 1.4em;line-height: 1.6em; margin: 0;}
+        
+    .testimonial p{
+        font-size: .8em;
+        line-height: 1.2em;
+        }
+    .footer {
+        .social-links,.copyright, .nav-footer{
+            text-align: center;
+            }
+        }
+    body.contact{
+        .address {
+            border-right:0;
+            }
+        .contact-form {
+            margin-top: @baseLength;
+            .border-radius(3px);
+            padding: @baseLength * 1.5;
+            background: darken(@white, 5%);}
+        form label {font-size: .8em;}
+         input,textarea {  width: 100%; margin: .5em; padding-left: 0;}
+        }
+        
+        body.about .founder {
+            margin-top: 1em !important;     
+            	padding: 10px;
+        }
+    }
+
+@media (max-width:@screen-sm-min){
+    body{font-size: @baseFontSize * .8;
+    line-height:@lineHeight * .8;}
+    h1{font-size: 1.6em;}
+    h3{font-size: 1.4em;}
+    .container>h1 {
+    margin: 1em 0 1.5em;
+    }
+    h3 {margin: 1em 0;}
+    p, h4 {margin: 1.2em 0 .8em;}
+    .testimonial p{
+        font-size: .6em;
+        line-height: 1em;
+        }
+    .header {
+    .navbar-brand{ width: 99px; height: 50px;background-size: 99px 50px;
+        }
+    .navbar li a {font-size: .8em; }
+    }
+    
+    body.home {
+         .jumbotron h1 {font-size: 2em;}
+        .hero-unit p, p.price { 
+        font-size: .8em;line-height: 1.6em; margin: 0;}
+        
+        .cta p, .testimonial p {
+        font-size: .5em;line-height: 1.2em; margin: 0 0 .5em;
+            }
+        }
+        
+        }
+    body.home .subscribe-form {
+        margin-bottom: @baseLength *1;
+        text-align: center;
+        input {width: @baseLength * 25;}
+        input, button {
+            font-size: 1em;
+            height: @baseLength * 4;
+            padding: (@baseLength*.6) (@baseLength * 2);
+            margin-bottom: 0;
+            }    
+
+    
+    }

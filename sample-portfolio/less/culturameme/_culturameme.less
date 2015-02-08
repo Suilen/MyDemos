@@ -1,0 +1,322 @@
+@import "_meme-variables.less";
+@import "_meme-mixins.less";
+@import "_meme-fonts.less";
+@import "mixins.less";
+// @import "variables.less";
+
+*{
+ .box-sizing(border-box);  
+ margin: 0;
+ padding: 0;
+}
+
+// =========================================================================  Typography
+body {
+    font-family: @bodyFont, @backupFonts;
+    font-size: @baseFontSize;
+    font-size: 16px;
+    line-height: 20px;
+    color: @cGrey1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Libre Baskerville', serif; 
+    font-size: 38px ;line-height: 36px ; 
+    color: white; text-transform: uppercase;}
+    
+h2 {font-family: 'Cardo', serif; font-size: 36px; line-height: 30px; color: @cGrey1; text-transform: none;}
+h2.sans {font-family: 'Raleway', sans-serif; text-transform: uppercase;   }
+
+h3, h4 {font-family: 'Open Sans', Arial, sans-serif ;}
+h3{    
+    letter-spacing: 2px; text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0,0,0,0.3);
+    font-size: 20px ; line-height: 22px ; text-transform: none ;}
+
+h4 {font-size: 18px; font-weight: ; line-height: ; color: ;}
+h5,p {font-family: 'Quattrocento Sans', 'helvetica neue', sans-serif; 
+    font-size: 14px ; font-weight: bold; line-height: 20px ; }
+    
+p {font-weight: normal;}
+.footer p,
+.footer a { font-size: 16px ; line-height: 18px ; margin: ; color: #fff ;}
+
+.small {font-size: .8em;}
+
+// =================================================================== general el setup
+img {width: 100%;height: auto;}
+
+a, a:visited, a:hover {
+    color: inherit;
+    text-decoration: underline;
+    &.c-btn {text-decoration: none;}
+}
+.navbar li a {text-decoration: none;}
+p a { color: @cYellow ;}
+.navbar-default .navbar-nav>.active>a {cursor: text;}
+header li a{ }
+ul, li {list-style: none;}
+
+.box-wrp {
+	text-align: center;
+	margin: 0 auto;
+	color: #2d3a3f;
+	padding-top: 60px;
+}
+
+.content-wrp {
+	display: block;
+	background: rgba(255, 255, 255, 0.6);
+	padding: 20px;
+	.border-radius(3px);
+	margin: 10px 5px;
+	.box-shadow(1px 1px 4px rgba(0, 0, 0, 0.4));
+}
+
+// ============================================================================ logos&btn basic
+.c-logo, .c-btn {
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+    &.navbar-brand {   
+        }   
+}
+
+.c-btn {
+    text-indent: 0%; 
+    text-align: center; 
+    vertical-align: middle; 
+    padding: 10px 20px;
+	background-color: @cGrey3;
+    font-family: 'Open Sans', 'helvetica', sans-serif;	
+	background-repeat: no-repeat;
+	.transition(background-color, .4s);
+    }
+    
+
+//============================================================================ c-logo & c-btns 
+.navbar-brand.c-logo
+ {
+	/*background: url(images/logo-letters-large2.png);*/
+	background-repeat: no-repeat;
+	/*background-size: 146px 50px;*/
+	height: 50px;
+	width: 250px;
+	margin: 0px 10px 0px 5px;
+	font-family: HoboStd;
+	text-indent: 0;
+	color: #fff;
+	text-shadow: 0px 1px #6E2C76;
+	font-size: 36px;
+	line-height: 100%;
+	&:hover {color: #fff;}
+}
+
+
+#signup,
+#signin {	
+	border: 1px solid #e3e3e3;
+	padding: 10px;
+	vertical-align: middle;
+	margin: 13px 0 0 0;
+	border-radius: 25px;
+}
+#signin{border: 1px solid transparent;}
+#signin:hover {
+    color: #fff8f6;
+    text-shadow: 0 1px 1px #6f6f6f;
+    background: #34a7c1;
+     border: 1px solid #e3e3e3;
+}
+#signup {color: white; text-shadow: 0 1px 1px @cGrey2; background: transparent;}
+#signup:hover,
+#signup:focus {background-color: @cDarkGreen; border-color: @cDarkGreen;
+// color: #34a7c1;text-shadow: 0 1px 1px #fff;
+}
+#signin:hover,
+#signin:focus {background-color: rgba(244, 217, 110, .3);text-shadow: 0 1px 1px @cGrey2;}
+
+
+
+.select-btn {
+    background: url('../images/btn-select.png') no-repeat;
+    background-size: 102px 50px;
+    width: 102px;
+    height: 50px;
+    }
+  
+a.modal-close-btn {
+    background: @cGreen; 
+    // background: url('../images/btn-modal-close.png') no-repeat;
+    // .border-radius(27px);
+    background-size: 27px 27px ;
+    width: 27px;
+    height: 27px;  
+    font-weight: bold;
+    color: #fff;
+    text-indent: 2px;
+    font-size: 27px;
+    line-height: 18px;
+    text-align: center;
+    }
+
+.form-submit-btn {
+    background: url('../images/btn-submit.jpg') no-repeat;
+    background-size: 143px 63px;
+    width: 143px;
+    height: 63px;
+    border: 0;
+    display: block;
+    margin: 37px auto -24px auto;
+    }
+
+.social-links li {
+    display: inline-block;
+    margin:  0 3px;
+    a{
+   width: 50px;
+    height: 50px;
+    font-size: 30px;
+    padding: 11px;
+    background-color: #2C758B;
+    color: @cLight;
+    .border-radius(50%);
+    &:hover {background-color: #1A5B6E;}
+    i {vertical-align: middle; display: block; line-height: 100%;}
+    }
+    }
+    
+    
+a.facebook-btn {}
+a.twitter-btn {}
+a.email-btn {font-size: 28px;}
+
+// ============================================================================ footer 
+footer{
+    color: @cLight;
+    background: @footerColor ;    
+    height: 300px;
+    padding-top: 40px;
+    
+    p{ font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        font-family: 'Libre Baskerville', serif;
+        }
+        .row{
+            margin: 0 auto;
+            width: 50%;
+            .lf {p {text-align: right; 
+            // text-transform: capitalize;
+            }}
+            .rt {text-align: left;}
+            div {
+                
+                }
+            }
+    } 
+// ===========================================================================  header
+
+header {background: @cGrey3;}
+
+.navbar {
+  height: 65px;
+    
+    margin: 0;border: 0;
+	background-color: rgba(172, 176, 178, 0.35);
+	background-repeat: no-repeat;
+	background-size: cover;
+	.box-shadow(0 0 10px #000);
+	.border-radius(0);
+    }
+.navbar-default .navbar-nav>li>a {
+	padding-top: 25px;
+	padding-bottom: 20px;
+	color: #222222;
+	text-shadow: 0 1px 1px #FFF8F6;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover, 
+.navbar-default .navbar-nav>.open>a:focus 
+ {color: #2b2b2b; text-shadow: 0 1px 1px #F2F2F2;background-color: rgba(255, 255, 255, 0.5);}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus
+{
+	color: #2b2b2b;
+	background-color:rgba(255, 255, 255, 0.75);	
+	text-shadow: 0 1px 1px #efefef;
+	font-weight: bold;
+}  
+.dropdown-menu{background: @cWrp;
+    &>li>a:hover {background: @cGrey3;}
+}
+// dropdown scroll bar issue-fix
+.navbar-collapse.in {
+    overflow-y: visible;
+}
+// ========================================================================= home banner
+
+.home-banner {
+}
+
+// =======================================================================  inner-content
+.inner-content {
+    padding: 80px auto;
+    }
+
+// ========================================================================= responsive 
+.c-980 {width: 970px;}
+    
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus {
+    border-color: #FFF;
+    background-color: transparent;
+   
+    .icon-bar{background-color: @cDarkGreen;}
+}
+.navbar-default .navbar-toggle:hover{
+    border-color: #FFF;
+    background-color: rgba(49, 134, 153, 0.35);
+    .icon-bar{background-color: @cLight;}
+    }
+@media (max-width: 1199px ){
+    .nav>li>a {padding: 10px;}
+    }
+@media (max-width: 992px){
+.navbar-brand { display: none; }
+}
+@media (max-width: 767px){
+        .navbar-brand { display: block; }
+        .navbar-nav {  margin-top: 3px;}
+        .navbar-default .navbar-nav>li>a{text-align: center;}  
+        .navbar-collapse {background: rgba(203, 203, 203, 0.83);}
+        .navbar-default .navbar-nav>li>a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        }  
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: @cLight;
+        text-align: center;
+        }
+}
+
+@media (max-width: 480px) {
+    .navbar-default .navbar-nav>li>a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        }   
+    .navbar-brand.c-logo {width: 200px; font-size: 28px;}
+    }
+        

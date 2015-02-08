@@ -1,0 +1,20 @@
+@import "_panasonic-variables.less";
+@import "_panasonic-mixins.less";
+@import "mixins.less";
+@import "variables.less";
+
+.p-banner {
+  background-image: url('../images/banner-faq.jpg');
+}
+
+.inner-content {
+    p,a  {color: @pDarkGrey;} 
+    h4 {margin-top: 27px;}
+    h4.firstChild {margin-top: 0px;}
+}
+
+@media (max-width:@screen-xs-min){
+    .inner-content {
+    p {font-size: 13px; line-height: auto;}
+    }
+}

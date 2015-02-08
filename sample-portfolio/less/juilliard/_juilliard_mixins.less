@@ -1,0 +1,46 @@
+.text-shadow(@h, @v, @b, @txtshadowcolor){
+    text-shadow:@h @v @b @txtshadowcolor;
+    }
+.transition(@prop, @time){
+    -webkit-transition: @prop @time;
+    -moz-transition: @prop @time;
+    -o-transition: @prop @time;
+    -ms-transition: @prop @time;
+    transition: @prop @time;
+    }
+.box-shadow(@boxshadow) {
+	-webkit-box-shadow:  @boxshadow ;
+	-moz-box-shadow:    @boxshadow ;
+	-ms-box-shadow:     @boxshadow ;
+	-o-box-shadow:     @boxshadow ;
+	box-shadow:     @boxshadow ;
+
+}
+
+.box-sizing(@bm){
+    -webkit-box-sizing: @bm;
+    -moz-box-sizing: @bm;
+    -ms-box-sizing: @bm;
+    -o-box-sizing: @bm;
+    box-sizing: @bm;
+}
+
+.placeholder(@color) {
+    ::-webkit-input-placeholder {
+        color: @color;
+    }
+    :-moz-placeholder {
+        color: @color;
+    }
+    ::-moz-placeholder {
+      color: @color;
+    }
+}
+
+.border-radius(@radius){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+    }
