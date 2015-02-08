@@ -1,16 +1,25 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
+html,
+body {
+  height: 100%;
+}
 body {
   background: #039be5;
+  overflow-y: hidden;
 }
 a:hover {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
+section {
+  width: 100%;
+}
 header {
   background: #039be5;
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 2;
 }
@@ -29,28 +38,40 @@ header .inner-content .p-logo:hover {
   line-height: 40px;
   text-transform: uppercase;
 }
-header .inner-content .social-media-icons {
+header .inner-content .social-media-icons,
+header .inner-content .nav-icons {
   margin-bottom: 0;
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
-header .inner-content .social-media-icons li {
+header .inner-content .social-media-icons li,
+header .inner-content .nav-icons li {
   display: inline-block;
 }
-header .inner-content .social-media-icons li a {
-  font-size: 40px;
+header .inner-content .social-media-icons li a,
+header .inner-content .nav-icons li a {
+  font-size: 30px;
   color: #fff;
   opacity: .8;
+  padding: 0 5px;
 }
-header .inner-content .social-media-icons li a:hover {
+header .inner-content .social-media-icons li a:hover,
+header .inner-content .nav-icons li a:hover {
   opacity: 1;
+}
+header .inner-content .social-media-icons li a i,
+header .inner-content .nav-icons li a i {
+  vertical-align: middle;
+  line-height: 40px;
+}
+header .inner-content .nav-icons {
+  display: none;
 }
 section.landing {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   color: #fff;
 }
 section.landing h4 {
@@ -58,12 +79,12 @@ section.landing h4 {
   display: block;
   width: 80%;
   max-width: 748px;
-  margin: 120px auto 80px auto;
   font-weight: 300;
   text-shadow: 0px 1px #777;
-  font-size: 20px;
-  line-height: 1.5em;
   color: #b6e6fe;
+  margin: 40px auto 10px auto;
+  font-size: 14px;
+  line-height: 1.5em;
 }
 section.landing h4 strong {
   color: #fff;
@@ -71,7 +92,7 @@ section.landing h4 strong {
 section.landing ul {
   display: block;
   width: 75%;
-  margin: 0 auto 80px auto;
+  margin: 0 auto 40px auto;
 }
 section.landing ul li {
   text-align: center;
@@ -86,6 +107,7 @@ section.landing ul li:hover {
 section.landing ul a {
   width: 100%;
   opacity: .8;
+  padding: 0;
 }
 section.landing ul a:hover {
   opacity: 1;
@@ -97,24 +119,48 @@ section.landing ul a h5 {
   font-size: 18px;
 }
 section.page {
-  position: relative;
-  margin-top: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding-top: 120px;
   padding-bottom: 80px;
   background: #b6e6fe;
 }
-section.web ul li {
-  text-align: center;
-  padding: 45px 25px;
+section.page div.scroll-wrp {
+  margin-top: 40px;
+  height: 500px;
+  overflow-y: scroll;
 }
-section.web ul li a {
+section.page div.back {
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 100%;
+  font-size: 60px;
+}
+section.page div.back h2 {
+  color: #4681b3;
+}
+section.page div.back a.back {
+  color: #038acc;
+}
+section.page div.back a.back:hover {
+  color: #fff;
+}
+section.page ul li {
+  text-align: center;
+  padding: 15px 25px;
+}
+section.page ul li a {
   width: 100%;
 }
-section.web ul li a > div {
+section.page ul li a > div {
   position: relative;
   margin-bottom: 25px;
 }
-section.web ul li a h4 {
+section.page ul li a h4 {
   color: #fff;
   position: absolute;
   top: 40%;
@@ -129,48 +175,111 @@ section.web ul li a h4 {
   text-shadow: 0px 1px #777;
   opacity: 0;
 }
-section.web ul li a p {
+section.page ul li a p {
   color: #222;
   font-weight: 300;
 }
-section.web ul li a img {
-  height: 200px;
+section.page ul li a img {
+  height: auto;
 }
-section.web ul li:hover {
+section.page ul li:hover {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
   background: rgba(255, 255, 255, 0.4);
 }
-section.web ul li:hover img {
+section.page ul li:hover img {
   -webkit-filter: blur(7px);
   filter: blur(7px);
   /*for FireFox*/
 }
-section.web ul li:hover h4 {
+section.page ul li:hover h4 {
   opacity: 1;
 }
+section.media ul li:hover {
+  background: transparent;
+}
+section.media ul.photos li h4 {
+  background: rgba(0, 0, 0, 0.3);
+  top: initial;
+  bottom: 0px;
+  left: 0;
+  padding: 5px;
+  margin: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
 @media (min-width: 320px) {
+  section.landing .nav-icons li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section.landing .nav-icons li a h5 {
+    font-size: 16px;
+  }
+  section.landing .nav-icons li a i {
+    font-size: 40px;
+  }
   section.landing ul li a i {
     font-size: 60px;
   }
   section.landing ul li a h5 {
     display: none;
   }
+  section.page .inner-content {
+    padding: 0 10px;
+  }
+  section.page div.scroll-wrp {
+    height: 300px;
+  }
+  section.page div.back {
+    font-size: 40px;
+  }
   section.web ul li {
     width: 100%;
+    padding: 15px 25px;
   }
 }
 @media (min-width: 480px) {
-  section.landing ul li a i {
+  header .inner-content .social-media-icons li a,
+  header .inner-content .nav-icons li a {
+    font-size: 40px;
+  }
+  section.page .inner-content {
+    padding: 40px 10px;
+  }
+  section.page div.scroll-wrp {
+    height: 500px;
+  }
+  section.page div.back {
+    font-size: 60px;
+  }
+  section.landing h4 {
+    font-size: 18px;
+    margin: 90px auto 40px auto;
+  }
+  section.landing .nav-icons li a {
+    padding: 15px;
+  }
+  section.landing .nav-icons li a i {
     font-size: 80px;
   }
-  section.landing ul li a h5 {
+  section.landing .nav-icons li a h5 {
     display: block;
+    font-size: 18px;
   }
   section.web ul li {
     width: 50%;
+    padding: 45px 25px;
   }
+}
+@media (min-width: 768px) {
+  margin: 120px auto 80px auto;
+  font-size: 20px;
+  line-height: 1.5em;
 }
 @media (min-width: 992px) {
   section.web ul li {
