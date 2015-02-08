@@ -1,1 +1,179 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
+body {
+  background: #039be5;
+}
+a:hover {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+header {
+  background: #039be5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+header .inner-content {
+  min-height: initial;
+  padding: 10px;
+  height: 60px;
+}
+header .inner-content .p-logo,
+header .inner-content .p-logo:hover {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #fff;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+header .inner-content .social-media-icons {
+  margin-bottom: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+header .inner-content .social-media-icons li {
+  display: inline-block;
+}
+header .inner-content .social-media-icons li a {
+  font-size: 40px;
+  color: #fff;
+  opacity: .8;
+}
+header .inner-content .social-media-icons li a:hover {
+  opacity: 1;
+}
+section.landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+section.landing h4 {
+  text-align: justify;
+  display: block;
+  width: 80%;
+  max-width: 748px;
+  margin: 120px auto 80px auto;
+  font-weight: 300;
+  text-shadow: 0px 1px #777;
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #b6e6fe;
+}
+section.landing h4 strong {
+  color: #fff;
+}
+section.landing ul {
+  display: block;
+  width: 75%;
+  margin: 0 auto 80px auto;
+}
+section.landing ul li {
+  text-align: center;
+  padding: 15px;
+}
+section.landing ul li:hover {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  background: rgba(255, 255, 255, 0.2);
+}
+section.landing ul a {
+  width: 100%;
+  opacity: .8;
+}
+section.landing ul a:hover {
+  opacity: 1;
+}
+section.landing ul a i {
+  font-size: 80px;
+}
+section.landing ul a h5 {
+  font-size: 18px;
+}
+section.page {
+  position: relative;
+  margin-top: 100%;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background: #b6e6fe;
+}
+section.web ul li {
+  text-align: center;
+  padding: 45px 25px;
+}
+section.web ul li a {
+  width: 100%;
+}
+section.web ul li a > div {
+  position: relative;
+  margin-bottom: 25px;
+}
+section.web ul li a h4 {
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  font-size: 20px;
+  line-height: 1.5em;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 1px #777;
+  opacity: 0;
+}
+section.web ul li a p {
+  color: #222;
+  font-weight: 300;
+}
+section.web ul li a img {
+  height: 200px;
+}
+section.web ul li:hover {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  background: rgba(255, 255, 255, 0.4);
+}
+section.web ul li:hover img {
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+  /*for FireFox*/
+}
+section.web ul li:hover h4 {
+  opacity: 1;
+}
+@media (min-width: 320px) {
+  section.landing ul li a i {
+    font-size: 60px;
+  }
+  section.landing ul li a h5 {
+    display: none;
+  }
+  section.web ul li {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) {
+  section.landing ul li a i {
+    font-size: 80px;
+  }
+  section.landing ul li a h5 {
+    display: block;
+  }
+  section.web ul li {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  section.web ul li {
+    width: 33.3333333%;
+  }
+}

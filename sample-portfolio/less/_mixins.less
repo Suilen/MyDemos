@@ -1,3 +1,14 @@
+.filter( @x){
+    -webkit-filter: @x;
+	filter: @x ; /*for FireFox*/
+    } 
+.transform(@para){
+    -webkit-transform: @para ;
+    -moz-transform: @para ;
+    -o-transform: @para ;
+    -ms-transform: @para ;
+    transform: @para ;
+    }
 .text-shadow(@h, @v, @b, @txtshadowcolor){
     text-shadow:@h @v @b @txtshadowcolor;
     }

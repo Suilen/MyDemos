@@ -27,7 +27,7 @@ p {
 .small {
   font-size: .8em;
 }
-.p-inline {
+.inline {
   display: inline-block;
 }
 img {
@@ -38,13 +38,15 @@ img {
 }
 a,
 a:visited,
-a:hover {
+a:hover,
+a:focus {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a.c-btn,
 a:visited.c-btn,
-a:hover.c-btn {
+a:hover.c-btn,
+a:focus.c-btn {
   text-decoration: none;
 }
 .navbar li a {
@@ -54,14 +56,11 @@ ul,
 li {
   list-style: none;
 }
-.p-logo {
+.p-logo,
+.p-btn,
+.p-logo:hover,
+.p-btn:hover {
   display: inline-block;
-  overflow: hidden;
-  text-decoration: none;
-}
-.p-btn {
-  display: inline-block;
-  text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
@@ -96,9 +95,5 @@ footer p.copyright {
 .inner-content {
   padding: 40px 10px;
   min-height: 550px;
-}
-@media (min-width: 768px) {
-  .inner-content {
-    padding: 80px 10px;
-  }
+  position: relative;
 }
