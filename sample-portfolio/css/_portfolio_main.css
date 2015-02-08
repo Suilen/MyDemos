@@ -213,6 +213,9 @@ section.media ul.photos li h4 {
   transform: none;
 }
 @media (min-width: 320px) {
+  h2 {
+    font-size: 24px;
+  }
   section.landing .nav-icons li {
     padding-left: 0;
     padding-right: 0;
@@ -257,10 +260,6 @@ section.media ul.photos li h4 {
   section.page div.back {
     font-size: 60px;
   }
-  section.landing h4 {
-    font-size: 18px;
-    margin: 90px auto 40px auto;
-  }
   section.landing .nav-icons li a {
     padding: 15px;
   }
@@ -277,9 +276,13 @@ section.media ul.photos li h4 {
   }
 }
 @media (min-width: 768px) {
-  margin: 120px auto 80px auto;
-  font-size: 20px;
-  line-height: 1.5em;
+  h2 {
+    font-size: 30px;
+  }
+  section.landing h4 {
+    margin: 120px auto 40px auto;
+    font-size: 20px;
+  }
 }
 @media (min-width: 992px) {
   section.web ul li {
