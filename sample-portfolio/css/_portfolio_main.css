@@ -211,6 +211,29 @@ section.media ul.photos li h4 {
   -o-transform: none;
   -ms-transform: none;
   transform: none;
+  width: 100%;
+  font-size: 16px;
+}
+section.media ul.photos li h4 {
+  opacity: 1;
+}
+section.graphics ul.graphics li {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+section.graphics ul.graphics li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+}
+section ul.websites li a > div h4,
+section ul.videos li a > div h4 {
+  opacity: 1;
+  font-size: 14px;
+  white-space: nowrap;
+  background: black;
+  width: 100%;
+  top: 0;
 }
 @media (min-width: 320px) {
   h2 {
@@ -282,6 +305,18 @@ section.media ul.photos li h4 {
   section.landing h4 {
     margin: 120px auto 40px auto;
     font-size: 20px;
+  }
+  section ul.websites li a > div h4,
+  section ul.videos li a > div h4 {
+    opacity: 0;
+    top: 40%;
+    background: transparent;
+    font-size: 20px;
+    white-space: normal;
+  }
+  section ul.websites:hover li a > div h4,
+  section ul.videos:hover li a > div h4 {
+    opacity: 1;
   }
 }
 @media (min-width: 992px) {
