@@ -1,11 +1,16 @@
+// media gallery
+$(".fancybox").fancybox();
+
+// scroll bar
 $("section .scroll-wrp").mCustomScrollbar({theme:"minimal-dark"});
 
-
+// scroll section height
 $('section.page .scroll-wrp').css('height', $(window).height()-128);
 
-
+// nav-icon function
 $('.nav-icon').click(function(e){
 	e.preventDefault;
+	
 	var activeTab=".nav-tab." + $(this).attr('data-page');
 	$(activeTab).addClass('active');
 
@@ -22,6 +27,7 @@ $('.nav-icon').click(function(e){
 
 });
 
+// nav-tab function
 $('.nav-tab').click(function(e){
 	e.preventDefault;
 
@@ -43,7 +49,7 @@ $('.nav-tab').click(function(e){
 	  	
 });
 
-
+// back to landing page function
 $('a.back').click(function(e){
 	e.preventDefault;
 

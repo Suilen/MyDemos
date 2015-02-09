@@ -126,8 +126,11 @@ section.page {
   padding-top: 120px;
   padding-bottom: 80px;
 }
+section.page .secondary .inner-content {
+  padding: 18px 10px;
+}
 section.page div.scroll-wrp {
-  background: #b6e6fe;
+  background: #175c7e;
   margin-top: 30px;
   height: 500px;
   overflow-y: scroll;
@@ -154,6 +157,34 @@ section.page div.back h2 {
   margin: 0 5px 10px 0;
   line-height: 60px;
   vertical-align: middle;
+}
+section.page div.slide-back {
+  position: absolute;
+  text-align: right;
+  width: 100%;
+  font-size: 40px;
+  left: 0;
+  z-index: 5;
+}
+section.page div.slide-back a.slide-back {
+  padding: 5px;
+  color: #038acc;
+}
+section.page div.slide-back a.slide-back:hover {
+  color: #4681b3;
+}
+section.page div.slide-back h2 {
+  display: none;
+  color: #7E7E7E;
+  margin: 0px 0px 6px 10px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+section.page div.slide-back.top {
+  top: 0px;
+}
+section.page div.slide-back.bottom {
+  bottom: 0px;
 }
 section.page ul li {
   text-align: center;
@@ -182,7 +213,7 @@ section.page ul li a h4 {
   opacity: 0;
 }
 section.page ul li a p {
-  color: #222;
+  color: #DDD;
   font-weight: 300;
 }
 section.page ul li a img {
@@ -201,6 +232,49 @@ section.page ul li:hover img {
 }
 section.page ul li:hover h4 {
   opacity: 1;
+}
+section.page .secondary {
+  text-align: center;
+}
+section.page .secondary h1 {
+  font-size: 28px;
+  color: #777;
+  margin-bottom: 25px;
+}
+section.page .secondary p {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+section.page .secondary h1,
+section.page .secondary p {
+  display: block;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.page .secondary strong {
+  font-style: italic;
+}
+section.page .secondary ul li a img {
+  -webkit-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+section.page .secondary ul li:hover {
+  background: transparent;
+}
+section.page .secondary ul li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+  transform: scale(1.1);
+}
+section.page .secondary div.graphic1 ul li {
+  float: none;
+  margin: 0 auto;
+}
+section.page .secondary div.graphic1 ul li img {
+  border: 1px solid #eee;
 }
 section.media ul li:hover {
   background: transparent;
@@ -277,6 +351,9 @@ section ul.videos li a > div h4 {
     width: 100%;
     padding: 15px 25px;
   }
+  section.graphics ul.graphics li {
+    width: 100%;
+  }
 }
 @media (min-width: 480px) {
   header .inner-content .social-media-icons li a,
@@ -285,6 +362,9 @@ section ul.videos li a > div h4 {
   }
   section.page .inner-content {
     padding: 40px 10px;
+  }
+  section.page .secondary .inner-content {
+    padding: 50px 10px;
   }
   section.page div.scroll-wrp {
     height: 500px;
@@ -306,6 +386,9 @@ section ul.videos li a > div h4 {
     width: 50%;
     padding: 45px 25px;
   }
+  section.graphics ul.graphics li {
+    width: 50%;
+  }
 }
 @media (min-width: 768px) {
   h2 {
@@ -314,6 +397,9 @@ section ul.videos li a > div h4 {
   section.landing h4 {
     margin: 120px auto 40px auto;
     font-size: 20px;
+  }
+  section.page div.slide-back a.slide-back h2 {
+    display: inline-block;
   }
   section ul.websites li a > div h4,
   section ul.videos li a > div h4 {
@@ -334,5 +420,8 @@ section ul.videos li a > div h4 {
 @media (min-width: 992px) {
   section.web ul li {
     width: 33.3333333%;
+  }
+  section.graphics ul.graphics li {
+    width: 33.333333333%;
   }
 }
