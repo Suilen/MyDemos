@@ -14,6 +14,8 @@ $('.nav-icon').click(function(e){
 	$('header .social-media-icons').css('display', 'none');
 	$('header .nav-icons').css('display', 'block');
 
+	$(selected).fadeIn('fast');
+
 	$(selected).animate({
     	opacity: 1,
     	"top": "0"
@@ -25,8 +27,10 @@ $('.nav-icon').click(function(e){
 		activePage.animate({
 	    	opacity: 0,
 	    	"top": "100%"
-	  		}, 800, function() {	  			
+	  		}, 800, function() {	  		
+	  			activePage.fadeOut('fast')	
 	  			activePage.removeClass('on');
+	  			$(selected).fadeIn('fast');
 	  		});
 		
 		$(selected).animate({
