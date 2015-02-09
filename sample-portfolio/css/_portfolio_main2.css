@@ -202,6 +202,9 @@ section.page div.nav-bar .nav-tabs li.active h2 {
 section.page div.nav-bar .nav-tabs.desktop {
   display: none;
 }
+section.page div.nav-bar .nav-tabs.desktop li {
+  margin-top: 28px;
+}
 section.page div.nav-bar .nav-tabs.mobile li {
   padding: 5px 0px;
 }
@@ -379,6 +382,9 @@ section ul.videos li a > div h4 {
   }
   .container.media ul.photos li a > div h4 {
     font-size: 16px;
+  }
+  .container.graphics ul li {
+    width: 33.3333333%;
   }
 }
 @media (min-width: 900px) {
