@@ -23,6 +23,8 @@ $('.nav-icon').click(function(e){
   			$(selected).addClass('on');
 		});
 	} else if(!$(selected).hasClass('on')){
+		$(selected).fadeIn('fast');
+
 		var activePage= $('.page.on');
 		activePage.animate({
 	    	opacity: 0,
@@ -30,7 +32,6 @@ $('.nav-icon').click(function(e){
 	  		}, 800, function() {	  		
 	  			activePage.fadeOut('fast')	
 	  			activePage.removeClass('on');
-	  			$(selected).fadeIn('fast');
 	  		});
 		
 		$(selected).animate({
