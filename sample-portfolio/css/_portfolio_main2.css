@@ -113,10 +113,29 @@ section.landing ul a:hover {
   opacity: 1;
 }
 section.landing ul a i {
-  font-size: 80px;
+  font-size: 40px;
 }
 section.landing ul a h5 {
   font-size: 18px;
+}
+section.landing div.slide-up {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 60px;
+}
+section.landing div.slide-up a {
+  background: #fff;
+  border-radius: 40px 40px 0 0;
+  cursor: pointer;
+}
+section.landing div.slide-up a i {
+  color: #038acc;
+}
+section.landing div.slide-up a i:hover {
+  color: #4681b3;
 }
 section.page {
   position: fixed;
@@ -128,32 +147,63 @@ section.page {
 }
 section.page div.scroll-wrp {
   background: #b6e6fe;
-  margin-top: 30px;
+  margin-top: 8px;
   height: 500px;
   overflow-y: scroll;
 }
-section.page div.back {
+section.page div.nav-bar {
   position: absolute;
   left: 0;
   top: 60px;
   width: 100%;
-  font-size: 60px;
+  font-size: 40px;
   text-align: center;
   z-index: 5;
 }
-section.page div.back a.back {
+section.page div.nav-bar a.back,
+section.page div.nav-bar ul li {
   background: #fff;
   border-radius: 40px 40px 0 0;
+  cursor: pointer;
+}
+section.page div.nav-bar a.back i,
+section.page div.nav-bar ul li i {
   color: #038acc;
 }
-section.page div.back a.back:hover {
+section.page div.nav-bar a.back i:hover,
+section.page div.nav-bar ul li i:hover {
   color: #4681b3;
 }
-section.page div.back h2 {
+section.page div.nav-bar a.back {
+  margin-top: -56px;
+}
+section.page div.nav-bar h2 {
   color: #4681b3;
-  margin: 0 5px 10px 0;
-  line-height: 60px;
+  font-size: 22px;
+  margin: 0 10px;
+  line-height: 30px;
   vertical-align: middle;
+}
+section.page div.nav-bar .nav-tabs {
+  border: none;
+  display: inline-block;
+}
+section.page div.nav-bar .nav-tabs li {
+  margin-right: 1px;
+  margin-top: 28px;
+  background: #fff;
+}
+section.page div.nav-bar .nav-tabs li.active {
+  background: #b6e6fe;
+}
+section.page div.nav-bar .nav-tabs li.active h2 {
+  color: #5976A9;
+}
+section.page div.nav-bar .nav-tabs.desktop {
+  display: none;
+}
+section.page div.nav-bar .nav-tabs.mobile li {
+  padding: 5px 0px;
 }
 section.page ul li {
   text-align: center;
@@ -202,13 +252,17 @@ section.page ul li:hover img {
 section.page ul li:hover h4 {
   opacity: 1;
 }
-section.media ul li:hover {
+.container.web ul li {
+  width: 100%;
+  padding: 15px 25px;
+}
+.container.media ul li:hover {
   background: transparent;
 }
-section.media ul.videos li h4 {
+.container.media ul.videos li h4 {
   white-space: normal;
 }
-section.media ul.photos li h4 {
+.container.media ul.photos li h4 {
   background: rgba(0, 0, 0, 0.3);
   top: initial;
   bottom: 0px;
@@ -223,14 +277,17 @@ section.media ul.photos li h4 {
   width: 100%;
   font-size: 12px;
 }
-section.media ul.photos li h4 {
+.container.media ul.photos li h4 {
   opacity: 1;
 }
-section.graphics ul.graphics li {
+.container.graphics ul li {
+  width: 100%;
+}
+.container.graphics ul.graphics li {
   padding-left: 60px;
   padding-right: 60px;
 }
-section.graphics ul.graphics li:hover img {
+.container.graphics ul.graphics li:hover img {
   -webkit-filter: none;
   filter: none;
   /*for FireFox*/
@@ -270,13 +327,6 @@ section ul.videos li a > div h4 {
   section.page div.scroll-wrp {
     height: 300px;
   }
-  section.page div.back {
-    font-size: 40px;
-  }
-  section.web ul li {
-    width: 100%;
-    padding: 15px 25px;
-  }
 }
 @media (min-width: 480px) {
   header .inner-content .social-media-icons li a,
@@ -289,9 +339,6 @@ section ul.videos li a > div h4 {
   section.page div.scroll-wrp {
     height: 500px;
   }
-  section.page div.back {
-    font-size: 60px;
-  }
   section.landing .nav-icons li a {
     padding: 15px;
   }
@@ -302,9 +349,12 @@ section ul.videos li a > div h4 {
     display: block;
     font-size: 18px;
   }
-  section.web ul li {
+  .container.web ul li {
     width: 50%;
     padding: 45px 25px;
+  }
+  .container.graphics ul li {
+    width: 33.33333333%;
   }
 }
 @media (min-width: 768px) {
@@ -315,24 +365,63 @@ section ul.videos li a > div h4 {
     margin: 120px auto 40px auto;
     font-size: 20px;
   }
-  section ul.websites li a > div h4,
-  section ul.videos li a > div h4 {
+  section.page ul.websites li a > div h4,
+  section.page ul.videos li a > div h4 {
     opacity: 0;
     top: 40%;
     background: transparent;
     font-size: 20px;
     white-space: normal;
   }
-  section ul.websites:hover li a > div h4,
-  section ul.videos:hover li a > div h4 {
+  section.page ul.websites:hover li a > div h4,
+  section.page ul.videos:hover li a > div h4 {
     opacity: 1;
   }
-  section.media ul.photos li a > div h4 {
+  .container.media ul.photos li a > div h4 {
     font-size: 16px;
   }
 }
+@media (min-width: 900px) {
+  section.page div.scroll-wrp {
+    margin-top: 28px;
+  }
+  section.page div.nav-bar a.back {
+    margin-top: -2px;
+    font-size: 60px;
+  }
+  section.page div.nav-bar .nav-tabs.mobile {
+    display: none;
+  }
+  section.page div.nav-bar .nav-tabs.desktop {
+    display: block;
+  }
+}
 @media (min-width: 992px) {
-  section.web ul li {
+  .container.web ul li {
     width: 33.3333333%;
   }
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes scale-up {
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+  }
+}
+/* Standard syntax */
+@keyframes scale-up {
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+  }
+}
+div.slide-up a {
+  -webkit-animation: scale-up 1s cubic-bezier(0.175, 0.885, 0.32, 1) 1s infinite alternate;
+  /* Chrome, Safari, Opera */
+  animation: scale-up 1s cubic-bezier(0.175, 0.885, 0.32, 1) 1s infinite alternate;
+  /* Standard syntax */
 }

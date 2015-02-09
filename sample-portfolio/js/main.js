@@ -1,7 +1,7 @@
 $("section .scroll-wrp").mCustomScrollbar({theme:"minimal-dark"});
 
 if($(window).height()< 768){
-	$('section.page .scroll-wrp').css('height', $(window).height()-180);
+	$('section.page .scroll-wrp').css('height', $(window).height()-150);
 }
 
 $('.nav-icon').click(function(e){
