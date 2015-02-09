@@ -339,16 +339,6 @@ section ul.videos li a > div h4 {
   section.page div.scroll-wrp {
     height: 500px;
   }
-  section.landing .nav-icons li a {
-    padding: 15px;
-  }
-  section.landing .nav-icons li a i {
-    font-size: 80px;
-  }
-  section.landing .nav-icons li a h5 {
-    display: block;
-    font-size: 18px;
-  }
   .container.web ul li {
     width: 50%;
     padding: 45px 25px;
@@ -364,6 +354,16 @@ section ul.videos li a > div h4 {
   section.landing h4 {
     margin: 120px auto 40px auto;
     font-size: 20px;
+  }
+  section.landing .nav-icons li a {
+    padding: 15px;
+  }
+  section.landing .nav-icons li a i {
+    font-size: 80px;
+  }
+  section.landing .nav-icons li a h5 {
+    display: block;
+    font-size: 18px;
   }
   section.page ul.websites li a > div h4,
   section.page ul.videos li a > div h4 {
