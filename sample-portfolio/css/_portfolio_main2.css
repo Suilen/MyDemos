@@ -344,7 +344,7 @@ section ul.videos li a > div h4 {
     padding: 45px 25px;
   }
   .container.graphics ul li {
-    width: 33.33333333%;
+    width: 50%;
   }
 }
 @media (min-width: 768px) {
