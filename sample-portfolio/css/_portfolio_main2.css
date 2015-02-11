@@ -145,6 +145,10 @@ section.page {
   padding-top: 120px;
   padding-bottom: 80px;
 }
+section.page .secondary .inner-content {
+  padding: 18px 10px;
+  display: block;
+}
 section.page div.scroll-wrp {
   background: #b6e6fe;
   margin-top: 8px;
@@ -208,6 +212,34 @@ section.page div.nav-bar .nav-tabs.desktop li {
 section.page div.nav-bar .nav-tabs.mobile li {
   padding: 5px 0px;
 }
+section.page div.slide-back {
+  position: absolute;
+  width: 100%;
+  font-size: 40px;
+  left: 0;
+  z-index: 5;
+}
+section.page div.slide-back a.slide-back {
+  padding: 5px;
+}
+section.page div.slide-back a.slide-back:hover {
+  color: #4681b3;
+}
+section.page div.slide-back h2 {
+  display: none;
+  color: #7E7E7E;
+  margin: 0px 0px 6px 10px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+section.page div.slide-back.top {
+  top: 0px;
+  text-align: right;
+}
+section.page div.slide-back.bottom {
+  bottom: 0px;
+  text-align: center;
+}
 section.page ul li {
   text-align: center;
   padding: 15px 25px;
@@ -254,6 +286,53 @@ section.page ul li:hover img {
 }
 section.page ul li:hover h4 {
   opacity: 1;
+}
+section.page .secondary {
+  text-align: center;
+}
+section.page .secondary h1 {
+  font-size: 28px;
+  color: #777;
+  margin-bottom: 25px;
+}
+section.page .secondary p {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+section.page .secondary h1,
+section.page .secondary p {
+  display: block;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.page .secondary strong {
+  font-style: italic;
+}
+section.page .secondary ul li a img {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section.page .secondary ul li:hover {
+  background: transparent;
+}
+section.page .secondary ul li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+section.page .secondary div.graphic1 ul li {
+  float: none;
+  margin: 0 auto;
+}
+section.page .secondary div.graphic1 ul li img {
+  border: 1px solid #eee;
 }
 .container.web ul li {
   width: 100%;
@@ -339,6 +418,9 @@ section ul.videos li a > div h4 {
   section.page .inner-content {
     padding: 40px 10px;
   }
+  section.page .secondary .inner-content {
+    padding: 50px 10px;
+  }
   section.page div.scroll-wrp {
     height: 500px;
   }
@@ -379,6 +461,9 @@ section ul.videos li a > div h4 {
   section.page ul.websites:hover li a > div h4,
   section.page ul.videos:hover li a > div h4 {
     opacity: 1;
+  }
+  section.page div.slide-back a.slide-back h2 {
+    display: inline-block;
   }
   .container.media ul.photos li a > div h4 {
     font-size: 16px;

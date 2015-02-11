@@ -6,6 +6,10 @@ $("section .scroll-wrp").mCustomScrollbar({theme:"minimal-dark"});
 
 // scroll section height
 $('section.page .scroll-wrp').css('height', $(window).height()-150);
+$(window).resize(function() {
+  //resize just happened, pixels changed
+  $('section.page .scroll-wrp').css('height', $(window).height()-150);
+});
 
 // nav-icon function
 $('.nav-icon').click(function(e){
@@ -69,7 +73,7 @@ $('a.back').click(function(e){
 $('a.slide-left').click(function(e){
 	e.preventDefault;
 	
-	var item = "." + $(this).attr('data-item');
+	var item = ".item-wrp." + $(this).attr('data-item');
 	var primary = $(this).closest('.primary');
 	var secondary = $(this).closest('.scroll-wrp').find('.secondary');
 
