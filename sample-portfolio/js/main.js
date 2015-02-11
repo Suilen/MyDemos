@@ -60,6 +60,7 @@ $('a.back').click(function(e){
 	        $('header .nav-icons').css('display', 'none');
 	        $('header .social-media-icons').css('display', 'block');
 	        $('.landing').fadeIn('fast');
+	        activePage.fadeOut('fast');
 		});
 
 });
