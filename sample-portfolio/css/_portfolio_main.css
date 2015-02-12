@@ -479,6 +479,9 @@ section ul.videos li a > div h4 {
     margin: 120px auto 40px auto;
     font-size: 20px;
   }
+  section.landing .nav-icons li a h5 {
+    font-size: 18px;
+  }
   section.page div.slide-back a.slide-back h2 {
     display: inline-block;
   }
