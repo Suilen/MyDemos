@@ -132,7 +132,7 @@ section.page .secondary .inner-content {
 }
 section.page div.scroll-wrp {
   background: #175c7e;
-  margin-top: 30px;
+  margin-top: 0px;
   height: 500px;
   overflow-y: scroll;
 }
@@ -156,8 +156,9 @@ section.page div.back a.back:hover {
 section.page div.back h2 {
   color: #4681b3;
   margin: 0 5px 10px 0;
-  line-height: 60px;
+  line-height: 24px;
   vertical-align: middle;
+  font-size: 20px;
 }
 section.page div.slide-back {
   position: absolute;
@@ -281,11 +282,6 @@ section.page .secondary div.graphic1 ul li {
 section.page .secondary div.graphic1 ul li img {
   border: 1px solid #eee;
 }
-section.web ul li:hover img {
-  -webkit-filter: none;
-  filter: none;
-  /*for FireFox*/
-}
 section.media ul li:hover {
   background: transparent;
 }
@@ -402,18 +398,24 @@ section ul.videos li a > div h4 {
   width: 100%;
   top: 0;
 }
+section ul.websites li:hover img,
+section ul.videos li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+}
 @media (min-width: 320px) {
   h2 {
     font-size: 24px;
   }
-  section.landing .nav-icons li {
+  section.landing ul li {
     padding-left: 0;
     padding-right: 0;
   }
-  section.landing .nav-icons li a h5 {
+  section.landing ul li a h5 {
     font-size: 16px;
   }
-  section.landing .nav-icons li a i {
+  section.landing ul li a i {
     font-size: 40px;
   }
   section.landing ul li a i {
@@ -450,9 +452,6 @@ section ul.videos li a > div h4 {
   section.page div.scroll-wrp {
     height: 500px;
   }
-  section.page div.back {
-    font-size: 60px;
-  }
   section.landing .nav-icons li a {
     padding: 15px;
   }
@@ -487,6 +486,9 @@ section ul.videos li a > div h4 {
   section.landing .nav-icons li a h5 {
     font-size: 18px;
   }
+  section.page div.back h2 {
+    font-size: 20px;
+  }
   section.page div.slide-back a.slide-back h2 {
     display: inline-block;
   }
@@ -498,17 +500,32 @@ section ul.videos li a > div h4 {
     font-size: 20px;
     white-space: normal;
   }
-  section ul.websites:hover li a > div h4,
-  section ul.videos:hover li a > div h4 {
+  section ul.websites li:hover a > div h4,
+  section ul.videos li:hover a > div h4 {
     opacity: 1;
   }
-  section.web ul li:hover img {
-    -webkit-filter: 7px;
-    filter: 7px;
+  section ul.websites li:hover img,
+  section ul.videos li:hover img {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
     /*for FireFox*/
   }
   section.media ul.photos li a > div h4 {
     font-size: 16px;
+  }
+}
+@media (min-width: 900px) {
+  section.page div.scroll-wrp {
+    margin-top: 20px;
+  }
+  section.page div.back {
+    font-size: 60px;
+  }
+  section.page div.back h2 {
+    font-size: 30px;
+  }
+  section.page div.nav-bar a.back h2 {
+    line-height: 60px;
   }
 }
 @media (min-width: 992px) {

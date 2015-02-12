@@ -5,10 +5,17 @@ $(".fancybox").fancybox();
 $("section .scroll-wrp").mCustomScrollbar({theme:"minimal-dark"});
 
 // scroll section height
-$('section.page .scroll-wrp').css('height', $(window).height()-150);
+if($(window).width()>900){
+$('section.page .scroll-wrp').css('height', $(window).height()-140); }else{
+$('section.page .scroll-wrp').css('height', $(window).height()-120); 
+}
 $(window).resize(function() {
+
   //resize just happened, pixels changed
-  $('section.page .scroll-wrp').css('height', $(window).height()-150);
+  if($(window).width()>900){
+$('section.page .scroll-wrp').css('height', $(window).height()-140); }else{
+$('section.page .scroll-wrp').css('height', $(window).height()-120); 
+}
 });
 
 // nav-icon function
