@@ -383,6 +383,31 @@ section ul.videos li a > div h4 {
   width: 100%;
   top: 0;
 }
+form input,
+form textarea {
+  width: 100%;
+  border: 1px solid transparent;
+  -moz-box-shadow: inset 0 0 5px #cccccc;
+  -ms-box-shadow: inset 0 0 5px #cccccc;
+  -o-box-shadow: inset 0 0 5px #cccccc;
+  -webkit-box-shadow: inset 0 0 5px #cccccc;
+  box-shadow: inset 0 0 5px #cccccc;
+}
+form input:focus,
+form textarea:focus {
+  border: 1px solid gold;
+  -moz-box-shadow: 0 0 5px #ffffff;
+  -ms-box-shadow: 0 0 5px #ffffff;
+  -o-box-shadow: 0 0 5px #ffffff;
+  -webkit-box-shadow: 0 0 5px #ffffff;
+  box-shadow: 0 0 5px #ffffff;
+}
+form textarea {
+  resize: none;
+}
+form .required {
+  border: 1px solid red;
+}
 @media (min-width: 320px) {
   h2 {
     font-size: 24px;

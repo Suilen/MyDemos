@@ -113,10 +113,11 @@ section.landing ul a:hover {
   opacity: 1;
 }
 section.landing ul a i {
-  font-size: 80px;
+  font-size: 40px;
 }
 section.landing ul a h5 {
   font-size: 18px;
+  display: none;
 }
 section.page {
   position: fixed;
@@ -140,7 +141,7 @@ section.page div.back {
   left: 0;
   top: 60px;
   width: 100%;
-  font-size: 60px;
+  font-size: 40px;
   text-align: center;
   z-index: 5;
 }
@@ -312,6 +313,80 @@ section.graphics ul.graphics li:hover img {
   filter: none;
   /*for FireFox*/
 }
+section.contact p {
+  color: #ddd !important;
+  margin-top: 15px;
+  line-height: 1.8em;
+  font-size: 15px;
+}
+section.contact ul {
+  margin-top: 15px;
+}
+section.contact ul li {
+  text-align: left;
+  color: #E7D5A8;
+  position: relative;
+  padding-left: 50px;
+}
+section.contact ul li i {
+  color: #f7cd28;
+  font-size: 35px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+section.contact ul li i.fa-envelope {
+  font-size: 30px;
+}
+section.contact ul li strong {
+  color: #f7cd28;
+  display: none;
+}
+section.contact ul li:hover {
+  background: transparent;
+}
+form {
+  margin-top: 15px;
+}
+form label {
+  color: #DDD;
+}
+form label strong {
+  vertical-align: middle;
+  color: red;
+}
+form .form-control {
+  width: 100%;
+  border: 1px solid transparent;
+  -moz-box-shadow: inset 1px 0 5px #cccccc;
+  -ms-box-shadow: inset 1px 0 5px #cccccc;
+  -o-box-shadow: inset 1px 0 5px #cccccc;
+  -webkit-box-shadow: inset 1px 0 5px #cccccc;
+  box-shadow: inset 1px 0 5px #cccccc;
+}
+form .form-control:focus {
+  -moz-box-shadow: 0 0 5px #ffffff;
+  -ms-box-shadow: 0 0 5px #ffffff;
+  -o-box-shadow: 0 0 5px #ffffff;
+  -webkit-box-shadow: 0 0 5px #ffffff;
+  box-shadow: 0 0 5px #ffffff;
+}
+form textarea {
+  resize: none;
+}
+form .required {
+  border: 1px solid red;
+}
+form a.p-btn {
+  cursor: pointer;
+  width: 100%;
+  color: #2D2D2D;
+  background: #f7cd28;
+}
+#message-status h4 {
+  color: gold;
+  margin: 30px 10px;
+}
 section ul.websites li a > div h4,
 section ul.videos li a > div h4 {
   opacity: 1;
@@ -346,9 +421,6 @@ section ul.videos li a > div h4 {
   }
   section.page div.scroll-wrp {
     height: 300px;
-  }
-  section.page div.back {
-    font-size: 40px;
   }
   section.web ul li {
     width: 100%;
@@ -391,6 +463,12 @@ section ul.videos li a > div h4 {
   }
   section.graphics ul.graphics li {
     width: 50%;
+  }
+  section.contact ul li {
+    padding-left: 80px;
+  }
+  section.contact ul li strong {
+    display: inline-block;
   }
 }
 @media (min-width: 768px) {

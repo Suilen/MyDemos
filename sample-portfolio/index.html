@@ -66,7 +66,7 @@
 
 <section class="landing">
 	<div class="container inner-content">
-		<h4><strong>I</strong> am a M.A. student in Instructional Tech &#38; Media program, at Teachers College, <strong>Columbia University</strong>. Having a strong <strong>Ed Tech</strong> background, I am interested in how to use technologies to <strong>optimize learning process</strong>, especially informal learning, and technology assisted <strong>language learning</strong>. I also enjoy doing front-end <strong>web design</strong>, photography and Chinese calligraphy.</h4>
+		<h4><strong>I</strong> am a M.A. student in Instructional Tech &#38; Media program, at Teachers College, <strong>Columbia University</strong>. Having a strong <strong>Ed Tech</strong> background, I am interested in using technologies to <strong>optimize learning process</strong>, especially informal learning, and technology assisted <strong>language learning</strong>. I also enjoy doing front-end <strong>web design</strong>, photography and Chinese calligraphy.</h4>
 		<ul class="row nav-icons">
 			<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 				<a href="#" class="p-btn nav-icon" data-page="web">
@@ -361,6 +361,48 @@
 
 <section class="page contact">
 	<div class="scroll-wrp">
+		<div class="container inner-content">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-12 col-sm-12">
+					<div id="message-status" style="display: block;">
+						<!-- status goes here -->
+					</div>
+					<form class="row" action="javascript:sendMessage()" method="post" id="contact-form">
+						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						    <label for="name">Your Name</label>
+						    <input type="text" class="form-control" name="name" id="contact-name">
+						</div>
+						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="email">Your Email <strong>*</strong></label>
+							<input type="text" name="email" class="form-control" id="contact-email"  onblur="validateEmail()">
+						</div>
+						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="subject">Subject <strong>*</strong></label>
+							<input type="text" class="form-control"  id="contact-subject" onblur="validateSubject()" name="subject" >
+						</div>
+						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="message">Message <strong>*</strong></label>
+							<textarea class="form-control" rows="5" name="message" onblur="validateMessage()" id="contact-message" placeholder="At least 10 characters long."></textarea>
+						</div>
+						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<a class="p-btn" href="javascript:{}" onclick="document.getElementById('contact-form').submit();">Send Message</a>
+						</div>						
+					</form>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 col-sm-12">
+
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-12 col-sm-12">
+					
+					<ul>
+						<li><span><i class="fa fa-phone-square"></i></span><strong>Telephone: </strong> (718)-7890-3452</li>
+						<li><span><i class="fa fa-envelope"></i></span><strong>Email: </strong> xx9999@tc.columbia.edu</li>
+					</ul>
+
+					<p>My name is XXX XXX. I am currently a M.A. student in Instructional Tech &#38; Media program, at Teachers College, Columbia University. I'm looking for a 2015 summer internship opportunity related to educational technology or front-end web design. To reach me, you may send me a message by filling out the form on this page, or use the more traditional contact info listed above.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="back">
 		<a href="#" class="p-btn back"><h2 class="inline">Contact Me</h2><i class="fa fa-chevron-circle-down"></i></a>
@@ -395,6 +437,7 @@ section .item-wrp{display:none;}
 
 	 <script src="js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
 	 <script src="js/main.js"></script>
+	 <script src="js/form.js"></script>
 
 </body>
 </html>
