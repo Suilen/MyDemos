@@ -404,6 +404,11 @@ section ul.videos li:hover img {
   filter: none;
   /*for FireFox*/
 }
+section ul.photos li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+}
 @media (min-width: 320px) {
   h2 {
     font-size: 24px;
@@ -431,6 +436,9 @@ section ul.videos li:hover img {
   }
   section.graphics ul.graphics li {
     width: 100%;
+  }
+  section.contact .inner-content {
+    padding: 0 20px;
   }
 }
 @media (min-width: 480px) {
@@ -501,6 +509,11 @@ section ul.videos li:hover img {
   }
   section ul.websites li:hover img,
   section ul.videos li:hover img {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    /*for FireFox*/
+  }
+  section ul.photos li:hover img {
     -webkit-filter: blur(7px);
     filter: blur(7px);
     /*for FireFox*/
