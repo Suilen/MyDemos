@@ -185,6 +185,7 @@ section.page div.slide-back.top {
 }
 section.page div.slide-back.bottom {
   bottom: 0px;
+  text-align: center;
 }
 section.page ul li {
   text-align: center;
