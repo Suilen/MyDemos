@@ -280,6 +280,11 @@ section.page .secondary div.graphic1 ul li {
 section.page .secondary div.graphic1 ul li img {
   border: 1px solid #eee;
 }
+section.web ul li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+}
 section.media ul li:hover {
   background: transparent;
 }
@@ -496,6 +501,11 @@ section ul.videos li a > div h4 {
   section ul.websites:hover li a > div h4,
   section ul.videos:hover li a > div h4 {
     opacity: 1;
+  }
+  section.web ul li:hover img {
+    -webkit-filter: 7px;
+    filter: 7px;
+    /*for FireFox*/
   }
   section.media ul.photos li a > div h4 {
     font-size: 16px;
