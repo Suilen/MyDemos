@@ -450,9 +450,6 @@ section ul.videos li a > div h4 {
   section.landing .nav-icons li a {
     padding: 15px;
   }
-  section.landing .nav-icons li a i {
-    font-size: 80px;
-  }
   section.landing .nav-icons li a h5 {
     display: block;
     font-size: 18px;
@@ -474,6 +471,9 @@ section ul.videos li a > div h4 {
 @media (min-width: 768px) {
   h2 {
     font-size: 30px;
+  }
+  section.landing i {
+    font-size: 80px;
   }
   section.landing h4 {
     margin: 120px auto 40px auto;

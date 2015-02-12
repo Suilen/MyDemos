@@ -29,18 +29,26 @@ function sendMessage() {
 	validateEmail();
 	validateSubject();
 	validateMessage();
-	if (!$("#contact-email,#contact-message","#contact-subject").hasClass("required")) {
+	if ((!$("#contact-email").hasClass("required")) && (!$("#contact-message").hasClass("required"))&&(!$("#contact-subject").hasClass("required"))) {
 		name = $("#contact-name").val();
 		email = $("#contact-email").val();
 		subject = $("#contact-subject").val();
 		message= $("#contact-message").val().replace(/<\/?[^>]+>/gi, '');
 		jQuery.post("includes/send_message.php",{name : name, email : email, subject : subject, message : message},
 			function (status) {
-				$("#message-status").slideDown(300).html(status);
+				$('#contact-form').slideUp(300, function(){
+					$("#message-status").slideDown(300).html(status);
+				});
+				
 				setTimeout(function() {
-				      $("#message-status").slideUp(300).html('<!-- status goes here -->');
-				}, 10000);
-				$("#contact-form")[0].reset();
+				      $("#message-status").slideUp(300, function(){
+				      	$('#message-status').html('<!-- status goes here -->');
+				      	$("#contact-form")[0].reset();
+				      	$('#contact-form').slideDown(300);
+				      });
+				      
+				}, 5000);
+				
 			}
 		
 		);
