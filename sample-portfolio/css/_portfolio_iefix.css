@@ -41,13 +41,6 @@
   /*for FireFox*/
 }
 @media (min-width: 768px) {
-  .sample-portfolio section ul.websites li a > div h4,
-  .sample-portfolio section ul.videos li a > div h4 {
-    padding: 20px auto;
-    background: #000000;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#4d000000');
-    zoom: 1;
-  }
   .sample-portfolio section.web ul.websites li:hover img {
     -webkit-filter: none;
     filter: none;
