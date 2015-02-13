@@ -5,6 +5,7 @@
 }
 .sample-portfolio section.page ul li a h4 {
   padding: 20px;
+  background: black;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#4d000000');
   zoom: 1;
 }
@@ -46,6 +47,9 @@
   /*for FireFox*/
 }
 @media (min-width: 768px) {
+  .sample-portfolio section.page ul li a h4 {
+    padding: 20px;
+  }
   .sample-portfolio section.web ul.websites li:hover img {
     -webkit-filter: none;
     filter: none;
