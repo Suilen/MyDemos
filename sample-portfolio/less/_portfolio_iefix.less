@@ -1,10 +1,39 @@
+@import "_mixins.less";
+@import "mixins.less";
+.sample-portfolio{
+    
+//========================= 
+section.landing {
+    ul li:hover{
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cFFFFFF',endColorstr='#4cFFFFFF'); // for ie
+        zoom: 1;
+        }
+}
+
 section.page {
  ul li {
      &:hover {
-         background: rgba(255, 255, 255, 0.6);
+         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF',endColorstr='#99FFFFFF'); // for ie
+         zoom: 1;
          img{.filter(none);}
-         }
-     
+         }   
      }    
+}
 
+section.media { 
+     ul.photos  li{
+        h4 {
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dFFFFFF',endColorstr='#4dFFFFFF'); // for ie
+            zoom: 1;           
+            }
+        }
+}
+
+section{
+     ul.websites, ul.graphics, .item-wrp.graphic2 ul {
+        li:hover {.box-shadow(1px 1px 4px #ddd);}
+    }
+}
+
+// ==================end 
 }

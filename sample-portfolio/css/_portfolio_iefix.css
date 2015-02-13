@@ -1,0 +1,27 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+.sample-portfolio section.landing ul li:hover {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cFFFFFF', endColorstr='#4cFFFFFF');
+  zoom: 1;
+}
+.sample-portfolio section.page ul li:hover {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF', endColorstr='#99FFFFFF');
+  zoom: 1;
+}
+.sample-portfolio section.page ul li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+}
+.sample-portfolio section.media ul.photos li h4 {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dFFFFFF', endColorstr='#4dFFFFFF');
+  zoom: 1;
+}
+.sample-portfolio section ul.websites li:hover,
+.sample-portfolio section ul.graphics li:hover,
+.sample-portfolio section .item-wrp.graphic2 ul li:hover {
+  -moz-box-shadow: 1px 1px 4px #dddddd;
+  -ms-box-shadow: 1px 1px 4px #dddddd;
+  -o-box-shadow: 1px 1px 4px #dddddd;
+  -webkit-box-shadow: 1px 1px 4px #dddddd;
+  box-shadow: 1px 1px 4px #dddddd;
+}
