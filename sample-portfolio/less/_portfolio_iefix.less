@@ -10,19 +10,19 @@ section.landing {
         }
 }
 
-section.page {
+section.web, section.media {
  ul li {
      &:hover {
          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF',endColorstr='#99FFFFFF'); // for ie
          zoom: 1;
-         img{.filter('none !important');}
+         img{.filter(none);}
          }   
      }    
 }
 
 section.media { 
      ul {
-        li:hover {background: none;}
+        li:hover {background: none; filter: none;}
         }
      ul.photos  li{
         h4 {

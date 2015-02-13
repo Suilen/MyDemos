@@ -3,17 +3,20 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cFFFFFF', endColorstr='#4cFFFFFF');
   zoom: 1;
 }
-.sample-portfolio section.page ul li:hover {
+.sample-portfolio section.web ul li:hover,
+.sample-portfolio section.media ul li:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF', endColorstr='#99FFFFFF');
   zoom: 1;
 }
-.sample-portfolio section.page ul li:hover img {
-  -webkit-filter: 'none !important';
-  filter: 'none !important';
+.sample-portfolio section.web ul li:hover img,
+.sample-portfolio section.media ul li:hover img {
+  -webkit-filter: none;
+  filter: none;
   /*for FireFox*/
 }
 .sample-portfolio section.media ul li:hover {
   background: none;
+  filter: none;
 }
 .sample-portfolio section.media ul.photos li h4 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dFFFFFF', endColorstr='#4dFFFFFF');
