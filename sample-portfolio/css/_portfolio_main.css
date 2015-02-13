@@ -119,6 +119,8 @@ body.sample-portfolio {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   background: rgba(255, 255, 255, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cFFFFFF', endColorstr='#4cFFFFFF');
+  zoom: 1;
 }
 .sample-portfolio section.landing ul a {
   width: 100%;
