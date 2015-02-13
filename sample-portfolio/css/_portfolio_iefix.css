@@ -18,14 +18,15 @@
   background: none;
   filter: none;
 }
-.sample-portfolio section.media ul li:hover img {
+.sample-portfolio section.media ul.photos li h4 {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#4d000000');
+  zoom: 1;
+}
+.sample-portfolio section ul.websites li:hover img,
+.sample-portfolio section ul.graphics li:hover img {
   -webkit-filter: none;
   filter: none;
   /*for FireFox*/
-}
-.sample-portfolio section.media ul.photos li h4 {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dFFFFFF', endColorstr='#4dFFFFFF');
-  zoom: 1;
 }
 .sample-portfolio section ul.websites li:hover,
 .sample-portfolio section ul.graphics li:hover,

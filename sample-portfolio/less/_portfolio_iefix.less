@@ -22,7 +22,7 @@ section.web, section.media {
 
 section.media { 
      ul {
-        li:hover {background: none; filter: none; img{.filter(none);}}
+        li:hover {background: none; filter: none; }
         }
      ul.photos  li{
         h4 {
@@ -33,6 +33,10 @@ section.media {
 }
 
 section{
+    ul.websites, ul.graphics {
+        li:hover img{.filter(none);}
+        }
+    
      ul.websites, ul.graphics, .item-wrp.graphic2 ul {
         li:hover {.box-shadow(1px 1px 4px #ddd);}
     }
