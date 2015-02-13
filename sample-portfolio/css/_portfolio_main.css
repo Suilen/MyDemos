@@ -182,9 +182,6 @@ body.sample-portfolio {
   -ms-border-radius: 40px 40px 0 0;
   -o-border-radius: 40px 40px 0 0;
   border-radius: 40px 40px 0 0;
-  behavior: url(http://css3pie.com/pie/PIE.htc);
-  position: relative;
-  z-index: 0;
   color: #038acc;
 }
 .sample-portfolio section.page div.back a.back:hover {
@@ -233,7 +230,6 @@ body.sample-portfolio {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  behavior: url(http://css3pie.com/pie/PIE.htc);
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
