@@ -310,6 +310,7 @@ body.sample-portfolio {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  border: 1px solid transparent;
 }
 .sample-portfolio section.page .secondary ul li:hover {
   background: transparent;

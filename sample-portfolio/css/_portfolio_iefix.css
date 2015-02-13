@@ -42,7 +42,7 @@
   /*for FireFox*/
 }
 .sample-portfolio section.page .secondary ul li:hover img {
-  border: 1px solid #777;
+  border: 1px solid #e0bf0d;
 }
 @media (min-width: 768px) {
   .sample-portfolio section ul.websites li a > div h4,
