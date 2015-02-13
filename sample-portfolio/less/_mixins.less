@@ -1,3 +1,9 @@
+.opacity( @percent){
+    filter: alpha(opacity=@percent); /* internet explorer */
+    opacity: @percent/100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity='@{percent}')"; /*IE8*/
+}
+
 .filter( @x){
     -webkit-filter: @x;
 	filter: @x ; /*for FireFox*/
