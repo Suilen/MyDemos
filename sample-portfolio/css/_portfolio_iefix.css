@@ -51,7 +51,7 @@
     /*IE8*/
     opacity: 100;
     filter: alpha(opacity=10000);
-    padding: 20px auto;
+    top: 0;
     background: #000000;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#4d000000');
     zoom: 1;
