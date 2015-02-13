@@ -3,6 +3,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cFFFFFF', endColorstr='#4cFFFFFF');
   zoom: 1;
 }
+.sample-portfolio section.page ul li a h4 {
+  padding: 20px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#4d000000');
+  zoom: 1;
+}
 .sample-portfolio section.page ul li:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF', endColorstr='#99FFFFFF');
   zoom: 1;
