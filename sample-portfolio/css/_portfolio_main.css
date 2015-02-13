@@ -10,6 +10,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: #039be5;
 }
 a:hover {
   -webkit-transition: all 0.4s;
