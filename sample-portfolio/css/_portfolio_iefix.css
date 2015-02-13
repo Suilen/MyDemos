@@ -4,6 +4,7 @@
   zoom: 1;
 }
 .sample-portfolio section.page ul li a h4 {
+  color: red;
   -webkit-transform: none;
   -moz-transform: none;
   -o-transform: none;
