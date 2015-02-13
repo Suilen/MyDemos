@@ -18,6 +18,11 @@
   background: none;
   filter: none;
 }
+.sample-portfolio section.media ul li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+}
 .sample-portfolio section.media ul.photos li h4 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dFFFFFF', endColorstr='#4dFFFFFF');
   zoom: 1;
