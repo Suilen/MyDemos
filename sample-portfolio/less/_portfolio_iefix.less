@@ -15,12 +15,15 @@ section.page {
      &:hover {
          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF',endColorstr='#99FFFFFF'); // for ie
          zoom: 1;
-         img{.filter(none);}
+         img{.filter('none !important');}
          }   
      }    
 }
 
 section.media { 
+     ul {
+        li:hover {background: none;}
+        }
      ul.photos  li{
         h4 {
             filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dFFFFFF',endColorstr='#4dFFFFFF'); // for ie

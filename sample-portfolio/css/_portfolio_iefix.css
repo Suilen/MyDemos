@@ -8,9 +8,12 @@
   zoom: 1;
 }
 .sample-portfolio section.page ul li:hover img {
-  -webkit-filter: none;
-  filter: none;
+  -webkit-filter: 'none !important';
+  filter: 'none !important';
   /*for FireFox*/
+}
+.sample-portfolio section.media ul li:hover {
+  background: none;
 }
 .sample-portfolio section.media ul.photos li h4 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dFFFFFF', endColorstr='#4dFFFFFF');
