@@ -443,7 +443,11 @@ section .item-wrp{display:none;}
 	 <script src="js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
 	 <script src="js/main.js"></script>
 	 <script src="js/form.js"></script>
-	 <script src="js/visual.js"></script>
+	 <script>
+	    var ismobile=(/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+	    if(!ismobile) document.write('<script src="js/visual.js"><\/script>'); 
+	</script>
+	 
 
 </body>
 </html>

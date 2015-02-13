@@ -1,5 +1,3 @@
-if($(window).width()> 700){
-
 var t = new Trianglify();
 
 $('.nav-icon').hover(
@@ -47,4 +45,3 @@ function height() {
                 document.body.clientHeight, document.documentElement.clientHeight
             );
         }
-}
