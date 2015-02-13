@@ -36,9 +36,13 @@
   box-shadow: 1px 1px 4px #dddddd;
 }
 @media (min-width: 768px) {
-  .sample-portfolio .sample-portfolio section ul.websites li:hover img,
-  .sample-portfolio .sample-portfolio section ul.videos li:hover img,
-  .sample-portfolio .sample-portfolio section ul.photos li:hover img {
+  .sample-portfolio .sample-portfolio section.web ul.websites li:hover img {
+    -webkit-filter: none;
+    filter: none;
+    /*for FireFox*/
+  }
+  .sample-portfolio .sample-portfolio section.media ul.videos li:hover img,
+  .sample-portfolio .sample-portfolio section.media ul.photos li:hover img {
     -webkit-filter: none;
     filter: none;
     /*for FireFox*/
