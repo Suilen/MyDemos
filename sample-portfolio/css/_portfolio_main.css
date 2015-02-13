@@ -334,6 +334,9 @@ body.sample-portfolio {
 .sample-portfolio section.media ul li:hover {
   background: transparent;
 }
+.sample-portfolio section.media ul li:hover p {
+  color: #DDD;
+}
 .sample-portfolio section.media ul.videos li h4 {
   white-space: normal;
 }
