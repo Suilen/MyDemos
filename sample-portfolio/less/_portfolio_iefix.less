@@ -34,15 +34,18 @@ section.media {
 }
 
 section{
-    ul.websites, ul.videos, ul.photos, ul.graphics {
-        li:hover img{.filter(none);}
-        }
+   
     
      ul.websites, ul.graphics, .item-wrp.graphic2 ul {
         li:hover {.box-shadow(1px 1px 4px #ddd);}
     }
 }
 
+section.web { ul.websites li:hover img{.filter(none);}}
+section.media
+    {
+       ul.videos, ul.photos{li:hover img{.filter(none);}}  
+    }
 // ==================end 
 }
 // responsive

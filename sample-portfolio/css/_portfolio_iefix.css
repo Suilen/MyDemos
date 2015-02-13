@@ -20,14 +20,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#4d000000');
   zoom: 1;
 }
-.sample-portfolio section ul.websites li:hover img,
-.sample-portfolio section ul.videos li:hover img,
-.sample-portfolio section ul.photos li:hover img,
-.sample-portfolio section ul.graphics li:hover img {
-  -webkit-filter: none;
-  filter: none;
-  /*for FireFox*/
-}
 .sample-portfolio section ul.websites li:hover,
 .sample-portfolio section ul.graphics li:hover,
 .sample-portfolio section .item-wrp.graphic2 ul li:hover {
@@ -36,6 +28,17 @@
   -o-box-shadow: 1px 1px 4px #dddddd;
   -webkit-box-shadow: 1px 1px 4px #dddddd;
   box-shadow: 1px 1px 4px #dddddd;
+}
+.sample-portfolio section.web ul.websites li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
+}
+.sample-portfolio section.media ul.videos li:hover img,
+.sample-portfolio section.media ul.photos li:hover img {
+  -webkit-filter: none;
+  filter: none;
+  /*for FireFox*/
 }
 @media (min-width: 768px) {
   .sample-portfolio section.web ul.websites li:hover img {
