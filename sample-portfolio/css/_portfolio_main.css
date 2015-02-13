@@ -183,8 +183,6 @@ body.sample-portfolio {
   -o-border-radius: 40px 40px 0 0;
   border-radius: 40px 40px 0 0;
   behavior: url(http://zhaodongzheng.com/myLibs/PIE-1.0/PIE.htc);
-  position: relative;
-  z-index: 0;
   color: #038acc;
 }
 .sample-portfolio section.page div.back a.back:hover {
