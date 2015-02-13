@@ -1,3 +1,5 @@
+if($(window).width()> 700){
+
 var t = new Trianglify();
 
 $('.nav-icon').hover(
@@ -15,9 +17,6 @@ $('.nav-icon').hover(
 	}
 
 );
-// $(window).resize(function() {
-//     redraw();
-//  });
 
 function redraw() {
             console.log("drawing "+document.body.clientWidth+"x"+height());
@@ -48,3 +47,4 @@ function height() {
                 document.body.clientHeight, document.documentElement.clientHeight
             );
         }
+}
