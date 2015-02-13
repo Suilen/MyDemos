@@ -10,15 +10,16 @@ section.landing {
         }
 }
 
-section.web, section.media {
+section.page {
  ul li {
      &:hover {
          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF',endColorstr='#99FFFFFF'); // for ie
          zoom: 1;
-         img{.filter(none);}
          }   
      }    
 }
+
+section.page ul li:hover img{.filter(none);}
 
 section.media { 
      ul {
@@ -41,6 +42,16 @@ section{
         li:hover {.box-shadow(1px 1px 4px #ddd);}
     }
 }
+// responsive
+@media (min-width: 768px){
+.sample-portfolio{
+    section {
+        ul.websites, ul.videos, ul.photos{li:hover img{.filter(none);}}  
+    }
+
+} 
+}
+
 
 // ==================end 
 }

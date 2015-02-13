@@ -3,13 +3,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cFFFFFF', endColorstr='#4cFFFFFF');
   zoom: 1;
 }
-.sample-portfolio section.web ul li:hover,
-.sample-portfolio section.media ul li:hover {
+.sample-portfolio section.page ul li:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99FFFFFF', endColorstr='#99FFFFFF');
   zoom: 1;
 }
-.sample-portfolio section.web ul li:hover img,
-.sample-portfolio section.media ul li:hover img {
+.sample-portfolio section.page ul li:hover img {
   -webkit-filter: none;
   filter: none;
   /*for FireFox*/
@@ -36,4 +34,13 @@
   -o-box-shadow: 1px 1px 4px #dddddd;
   -webkit-box-shadow: 1px 1px 4px #dddddd;
   box-shadow: 1px 1px 4px #dddddd;
+}
+@media (min-width: 768px) {
+  .sample-portfolio .sample-portfolio section ul.websites li:hover img,
+  .sample-portfolio .sample-portfolio section ul.videos li:hover img,
+  .sample-portfolio .sample-portfolio section ul.photos li:hover img {
+    -webkit-filter: none;
+    filter: none;
+    /*for FireFox*/
+  }
 }
