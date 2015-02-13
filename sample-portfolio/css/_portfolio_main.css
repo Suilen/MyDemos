@@ -323,6 +323,10 @@ body.sample-portfolio {
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+  /* IE8+ - must be on one line, unfortunately */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand')";
+  /* IE6 and 7 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand');
 }
 .sample-portfolio section.page .secondary div.graphic1 ul li {
   float: none;
