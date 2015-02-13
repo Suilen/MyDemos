@@ -41,6 +41,9 @@
   filter: none;
   /*for FireFox*/
 }
+.sample-portfolio section.page .secondary ul li:hover img {
+  border: 1px solid #777;
+}
 @media (min-width: 768px) {
   .sample-portfolio section ul.websites li a > div h4,
   .sample-portfolio section ul.videos li a > div h4 {
