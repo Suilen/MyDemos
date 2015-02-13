@@ -3,7 +3,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cFFFFFF', endColorstr='#4cFFFFFF');
   zoom: 1;
 }
-.sample-portfolio section.page ul li h4 {
+.sample-portfolio section.page ul li a h4 {
   -webkit-transform: none;
   -moz-transform: none;
   -o-transform: none;
